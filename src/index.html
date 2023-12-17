@@ -4,19 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unlock the wonders of Ukraine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jomolhari&family=Lato:wght@400;700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="container">
-        <nav>
+        <nav class="header__navigation">
           <a href="#">
-            <svg>
-              <use></use>
+            <svg width="64" height="46">
+              <use href="./images/sprite.svg#icon-logo"></use>
             </svg>
           </a>
-          <button type="menu">
-            <svg>
-              <use></use>
+          <button type="button">
+            <svg width="40" height="40">
+              <use href="./images/sprite.svg#menu"></use>
             </svg>
           </button>
         </nav>
@@ -25,7 +31,7 @@
     <main>
       <section class="hero">
         <div class="container">
-          <h1>Unlock the Wonders of <span>Ukraine</span></h1>
+          <h1 class="hero__title"><span>Unlock the Wonders</span><span> of</span> Ukraine</h1>
           <button type="button">Our tours</button>
         </div>
       </section>

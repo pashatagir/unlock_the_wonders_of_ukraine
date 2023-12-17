@@ -1,0 +1,23 @@
+.header__navigation {
+  padding-top: 16px;
+  @include flex(flex, space-between, center);
+  margin-bottom: 199px;
+}
+
+.hero__title {
+  @include flex(flex, none, center);
+  flex-direction: column;
+  @include font(64, 1.4, 0.64);
+  //   text-align: center;
+  & > span {
+    @include font(24, 1.4, 0.24);
+  }
+  &::after {
+    content: 'Ukraine';
+    transform: rotateX(180deg) translateY(21px);
+    background: linear-gradient(15deg, #fff -54.67%, rgba(255, 255, 255, 0) 58.38%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

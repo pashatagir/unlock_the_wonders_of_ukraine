@@ -1,0 +1,10 @@
+// загальний стиль кнопки
+$timingAnima: $mainTransitionDuration $mainTransitionTimingFunction;
+button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  @include flex(flex, center, center);
+  transition: color $timingAnima, background-color $timingAnima, border-color $timingAnima;
+}

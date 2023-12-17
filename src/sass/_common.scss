@@ -1,4 +1,10 @@
+@import '/node_modules/modern-normalize/modern-normalize.css';
 body {
   color: $primaryColor;
   background-color: $backgroundColor;
+  font-family: $mainFontFamily;
+  font-weight: $fontWeight;
+}
+section:not(:first-of-type) {
+  padding-top: 80px;
 }
