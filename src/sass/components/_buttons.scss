@@ -1,10 +1,31 @@
-// загальний стиль кнопки
 $timingAnima: $mainTransitionDuration $mainTransitionTimingFunction;
 button {
   padding: 0;
-  background-color: transparent;
+  background-color: $btnColor;
+  color: $primaryColor;
   border: none;
   outline: none;
   @include flex(flex, center, center);
+  @include font(16, 1.5, 0.206);
   transition: color $timingAnima, background-color $timingAnima, border-color $timingAnima;
+}
+
+.header__button,
+.pagination__button {
+  background-color: transparent;
+}
+.pagination__button {
+  margin-top: 32px;
+}
+
+.hero__button {
+  padding: 12px 52px;
+  border-radius: 4px;
+  margin-bottom: 226px;
+}
+
+.tours__button {
+  width: 100%;
+  padding: 14px 0px;
+  border-radius: 4px;
 }

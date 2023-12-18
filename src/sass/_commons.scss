@@ -1,0 +1,31 @@
+@import '/node_modules/modern-normalize/modern-normalize.css';
+
+body {
+  color: $primaryColor;
+  background-color: $backgroundColor;
+  font-family: $mainFontFamily;
+  font-weight: $fontWeight;
+}
+
+section:not(:first-of-type) {
+  padding-top: 80px;
+}
+
+.social-list {
+  @include flex(flex, space-between, center);
+  gap: 15px;
+}
+
+p {
+  font-family: $secondaryFontFamily;
+  @include font(16, 1.4, 0.16);
+}
+
+.copyright {
+  font-family: $mainFontFamily;
+  @include font(12, 1.4, 0.12);
+}
+
+.pagination {
+  @include flex(flex, space-between, center);
+}

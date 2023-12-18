@@ -1,0 +1,21 @@
+.tours_paragraph {
+  margin-bottom: 16px;
+}
+.tours__title-list {
+  margin-bottom: 17px;
+  @include font(18, 1.4, 0.18);
+  font-weight: $fontWeight;
+}
+.tours__list {
+  margin-bottom: 33px;
+}
+.tours__item {
+  @include flex(flex, start, center);
+  gap: 16px;
+  font-family: $secondaryFontFamily;
+  @include font(16, 1.4, 0.16);
+
+  &:not(:last-of-type) {
+    margin-bottom: 9px;
+  }
+}

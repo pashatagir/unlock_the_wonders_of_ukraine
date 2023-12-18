@@ -1,0 +1,26 @@
+.reviews {
+  background: linear-gradient(359deg, #141a19 7.33%, rgba(0, 0, 0, 0) 77.68%),
+    linear-gradient(180deg, #141a19 -2.08%, rgba(0, 0, 0, 0) 84.14%),
+    url(/src/images/unsplash_X4c7EiLf8GE.jpg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center bottom;
+  &__wrapper {
+    width: 100%;
+    min-height: 343px;
+    border: 1px solid $primaryColor;
+    padding: 32px;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+    margin-bottom: 32px;
+  }
+}
+
+.name {
+  @include font(18, 1.4, 0.18);
+}

@@ -1,0 +1,11 @@
+.about {
+  background: url(/src/images/map.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+}
