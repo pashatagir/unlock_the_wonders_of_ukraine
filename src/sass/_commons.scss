@@ -7,9 +7,18 @@ body {
   font-weight: $fontWeight;
 }
 
-.social-list {
-  @include flex(flex, space-between, center);
-  gap: 15px;
+section:not(:first-of-type) {
+  padding-top: 80px;
+  &:last-of-type {
+    padding-top: 54px;
+  }
+}
+
+.title {
+  text-align: center;
+  @include font(40, 1.4, 0.4);
+  font-weight: $fontWeight;
+  margin-bottom: 32px;
 }
 
 p {
@@ -20,6 +29,7 @@ p {
 .copyright {
   font-family: $mainFontFamily;
   @include font(12, 1.4, 0.12);
+  text-align: center;
 }
 
 .pagination {

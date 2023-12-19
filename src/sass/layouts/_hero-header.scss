@@ -39,3 +39,8 @@
     position: absolute;
   }
 }
+
+.social-list {
+  @include flex(flex, space-between, center);
+  gap: 15px;
+}

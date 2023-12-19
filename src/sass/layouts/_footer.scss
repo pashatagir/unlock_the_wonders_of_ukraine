@@ -1,0 +1,17 @@
+.footer {
+  padding: 96px 0px 16px;
+  &__social-list {
+    margin: 32px 0px 64px;
+    @include flex(flex, start, center);
+    gap: 15px;
+  }
+}
+
+.navigation__list,
+.address__list {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  @include font(16, 1.38, 0.16);
+}

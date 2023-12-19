@@ -1,0 +1,58 @@
+.start {
+  background: url(/src/images/unsplash_RTJXjK5v-SA.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center -1px;
+  padding-bottom: 54px;
+
+  &__container {
+    padding-top: 40px;
+    background-color: $backgroundColor;
+  }
+
+  &__title {
+    text-align: left;
+    @include font(32, 1.4, 0.32);
+    font-weight: $fontWeight;
+    margin-bottom: 24px;
+  }
+  &__paragraph {
+    max-width: 320px;
+    margin-bottom: 24px;
+    &:last-of-type {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40px;
+  &__input,
+  &__textarea {
+    padding: 14px 12px;
+    width: 100%;
+    background-color: $backgroundColor;
+    border: 1px solid $primaryColor;
+  }
+  &__label {
+    margin-bottom: 8px;
+    @include font(18, 1.33, 0.18);
+  }
+  &__input {
+    margin-bottom: 12px;
+    font-family: $secondaryFontFamily;
+    @include font(16, 1.3, 0.16);
+    color: $placeholderColor;
+  }
+
+  &__textarea {
+    min-height: 102px;
+    margin-bottom: 32px;
+    font-family: $secondaryFontFamily;
+    @include font(16, 1.4, 0.16);
+    color: $placeholderColor;
+  }
+}
