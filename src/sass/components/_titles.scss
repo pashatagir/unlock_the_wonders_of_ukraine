@@ -13,3 +13,8 @@
   font-weight: $fontWeight;
   margin: 16px 0px;
 }
+
+.start__title {
+  text-align: left;
+  @include font(32, 1.4, 0.32);
+}

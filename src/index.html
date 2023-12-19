@@ -4,12 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Unlock the wonders of Ukraine</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jomolhari&family=Lato:wght@400;700&family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
     <header class="header">
@@ -31,7 +25,7 @@
     <main>
       <section class="hero">
         <div class="container hero__container">
-          <h1 class="hero__title"><span>Unlock the Wonders</span><span> of</span> Ukraine</h1>
+          <h1 class="title hero__title"><span>Unlock the Wonders</span><span> of</span> Ukraine</h1>
           <button type="button" class="hero__button">Our tours</button>
           <ul class="social-list">
             <li>
@@ -150,11 +144,26 @@
         <div class="container">
           <h2 class="title reviews__title">Reviews</h2>
           <div class="reviews__wrapper">
-            <div class="reviews__info">
-              <img src="./images/Ellipse 46.png" alt="man" />
-              <p class="name">Dmitro</p>
+            <img src="./images/Ellipse 46.png" alt="man" class="reviews__avatar" />
+            <p class="reviews__name">Dmitro</p>
+            <div class="reviews__rating">
+              <svg width="24" height="24">
+                <use href="./images/sprite.svg#star"></use>
+              </svg>
+              <svg width="24" height="24">
+                <use href="./images/sprite.svg#star"></use>
+              </svg>
+              <svg width="24" height="24">
+                <use href="./images/sprite.svg#star"></use>
+              </svg>
+              <svg width="24" height="24">
+                <use href="./images/sprite.svg#star"></use>
+              </svg>
+              <svg width="24" height="24">
+                <use href="./images/sprite.svg#star"></use>
+              </svg>
             </div>
-            <p>
+            <p class="reviews__text">
               It was an incredible trip and I am very grateful to the organizers for the opportunity
               to learn more about our country
             </p>
@@ -175,7 +184,7 @@
       </section>
       <section class="start">
         <div class="container">
-          <h2>Start travel</h2>
+          <h2 class="title start__title">Start travel</h2>
           <p>
             If you want to get an unforgettable trip, quickly fill out the application and we will
             contact you during the day

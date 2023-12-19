@@ -7,10 +7,6 @@ body {
   font-weight: $fontWeight;
 }
 
-section:not(:first-of-type) {
-  padding-top: 80px;
-}
-
 .social-list {
   @include flex(flex, space-between, center);
   gap: 15px;
