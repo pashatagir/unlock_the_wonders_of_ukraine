@@ -1,42 +1,55 @@
 .header {
   position: absolute;
   width: 100%;
+
+  &__navigation {
+    padding-top: 16px;
+    @include flex(flex, space-between, center);
+  }
 }
-.header__navigation {
-  padding-top: 16px;
-  @include flex(flex, space-between, center);
-}
+
 .hero {
   background: linear-gradient(180deg, #141a19 -14.61%, rgba(0, 0, 0, 0) 24.08%),
     radial-gradient(54.53% 54.53% at 56.24% 51.15%, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%),
     url(/src/images/hero_bg.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
-}
+  background-size: auto;
+  background-position: center;
 
-.hero__container {
-  @include flex(flex, null, center);
-  flex-direction: column;
-  padding-top: 261px;
-  padding-bottom: 32px;
-}
-
-.hero__title {
-  @include flex(flex, null, center);
-  flex-direction: column;
-  @include font(64, 1.4, 0.64);
-  margin-bottom: 64px;
-  & > span {
-    @include font(24, 1.4, 0.24);
+  &__container {
+    @include flex(flex, null, center);
+    flex-direction: column;
+    padding-top: 261px;
+    padding-bottom: 32px;
   }
-  &::after {
-    content: 'Ukraine';
-    background: linear-gradient(15deg, #fff -54.67%, rgba(255, 255, 255, 0) 58.38%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transform: rotateX(180deg) translateY(-136px);
-    position: absolute;
+
+  &__title {
+    @include flex(flex, null, center);
+    flex-direction: column;
+    @include font(64, 1.4, 0.64);
+    margin-bottom: 64px;
+
+    & > span {
+      @include font(24, 1.4, 0.24);
+    }
+
+    &::after {
+      content: 'Ukraine';
+      background: linear-gradient(15deg, #fff -54.67%, rgba(255, 255, 255, 0) 58.38%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transform: rotateX(180deg) translateY(-136px);
+      position: absolute;
+    }
+  }
+
+  &__link {
+    padding: 12px 52px;
+    border-radius: 4px;
+    margin-bottom: 226px;
+    background-color: $btnColor;
+    @include font(16, 1.4, 0.16);
   }
 }
 

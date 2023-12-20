@@ -6,10 +6,10 @@
     <title>Unlock the wonders of Ukraine</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <div class="container">
         <nav class="navigation header__navigation">
-          <a href="#">
+          <a href="#header">
             <svg width="64" height="46">
               <use href="./images/sprite.svg#icon-logo"></use>
             </svg>
@@ -26,24 +26,36 @@
       <section class="hero">
         <div class="container hero__container">
           <h1 class="title hero__title"><span>Unlock the Wonders</span><span> of</span> Ukraine</h1>
-          <button type="button" class="hero__button">Our tours</button>
+          <a href="#tours" class="hero__link">Our tours</a>
           <ul class="social-list">
             <li>
-              <a href="#">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer nofollov"
+              >
                 <svg width="24" height="24">
                   <use href="./images/sprite.svg#instagram"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a
+                href="https://www.facebook.com/?locale=uk_UA"
+                target="_blank"
+                rel="noopener noreferrer nofollov"
+              >
                 <svg width="24" height="24">
                   <use href="./images/sprite.svg#facebook"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a
+                href="https://web.telegram.org/"
+                target="_blank"
+                rel="noopener noreferrer nofollov"
+              >
                 <svg width="24" height="24">
                   <use href="./images/sprite.svg#telegram"></use>
                 </svg>
@@ -52,7 +64,7 @@
           </ul>
         </div>
       </section>
-      <section class="about">
+      <section class="about" id="about">
         <div class="container about__container">
           <h2 class="title about__title">About us</h2>
           <div class="about__wrapper">
@@ -76,9 +88,9 @@
           </div>
         </div>
       </section>
-      <section class="tours">
+      <section class="tours" id="tours">
         <h2 class="title tours__title">Our tours</h2>
-        <img src="./images/Rectangle 1940.jpg" alt="lake synevir" />
+        <img src="./images/Rectangle 1940.jpg" alt="lake synevir" class="tours__image" />
         <div class="container">
           <h3 class="tours__subtitle">Lake Synevyr and Shipit waterfall</h3>
           <p class="tours_paragraph">
@@ -122,7 +134,7 @@
           </div>
         </div>
       </section>
-      <section class="gallery">
+      <section class="gallery" id="gallery">
         <div class="container">
           <h2 class="title gallery__title">Gallery</h2>
           <img
@@ -223,42 +235,53 @@
     <footer class="footer">
       <div class="container">
         <nav class="navigation footer__navigation">
-          <a href="#">
+          <a href="#header">
             <svg width="127" height="90">
               <use href="./images/sprite.svg#icon-logo"></use>
             </svg>
           </a>
           <ul class="navigation__list">
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Tours</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Contacts</a></li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#tours">Tours</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contacts">Contacts</a></li>
           </ul>
         </nav>
-        <address>
+        <address id="contacts">
           <ul class="address__list">
-            <li><a href="#">+38097-123-11-11</a></li>
-            <li><a href="#">WondersOfUkraine@gmail.com</a></li>
-            <li><a href="#">Lviv, Zaporyzhka, 198</a></li>
+            <li><a href="tel:+380971231111">+38097-123-11-11</a></li>
+            <li><a href="mailto:wondersofukraine@gmail.com">WondersOfUkraine@gmail.com</a></li>
+            <li>
+              <a
+                href="https://www.google.com/maps/place/%D0%B2%D1%83%D0%BB.+%D0%97%D0%B0%D0%BF%D0%BE%D1%80%D1%96%D0%B7%D1%8C%D0%BA%D0%B0,+%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%BF%D0%B0%D0%B2%D0%BB%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+%D0%91%D0%BE%D1%80%D1%89%D0%B0%D0%B3%D1%96%D0%B2%D0%BA%D0%B0,+%D0%9A%D0%B8%D1%97%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB./@50.42172,30.3284155,17z/data=!3m1!4b1!4m6!3m5!1s0x40d4cb0e447e7d7f:0x2cbf3d064d7c2b9d!8m2!3d50.4217166!4d30.3309904!16s%2Fg%2F11gcdnm6fy?authuser=0&entry=ttu"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                >Lviv, Zaporyzhka, 198</a
+              >
+            </li>
           </ul>
         </address>
         <ul class="footer__social-list">
           <li>
-            <a href="#">
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer nofollov">
               <svg width="24" height="24">
                 <use href="./images/sprite.svg#instagram"></use>
               </svg>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a
+              href="https://www.facebook.com/?locale=uk_UA"
+              target="_blank"
+              rel="noopener noreferrer nofollov"
+            >
               <svg width="24" height="24">
                 <use href="./images/sprite.svg#facebook"></use>
               </svg>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="https://web.telegram.org/" target="_blank" rel="noopener noreferrer nofollov">
               <svg width="24" height="24">
                 <use href="./images/sprite.svg#telegram"></use>
               </svg>
