@@ -10,18 +10,8 @@ button {
   transition: color $timingAnima, background-color $timingAnima, border-color $timingAnima;
 }
 
-.header__button,
-.pagination__button {
+.header__button {
   background-color: transparent;
-}
-.pagination__button {
-  margin-top: 32px;
-}
-
-.tours__button {
-  width: 100%;
-  padding: 14px 0px;
-  border-radius: 4px;
 }
 
 .form__button {

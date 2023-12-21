@@ -1,9 +1,13 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import { Navigation } from 'swiper/modules';
+import 'swiper/scss';
 
-export const swiper = new Swiper('.swiper', {
-  modules: [Navigation, Pagination],
+const swiper = new Swiper('.swiper', {
+  // Install modules
+  modules: [Navigation],
+  speed: 500,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 });

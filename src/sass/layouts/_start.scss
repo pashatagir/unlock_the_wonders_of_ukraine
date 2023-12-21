@@ -1,9 +1,12 @@
 .start {
-  background: url(/src/images/unsplash_RTJXjK5v-SA.jpg);
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: center;
-  padding-bottom: 54px;
+  &__bg {
+    background: url(/src/images/unsplash_RTJXjK5v-SA.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    padding-top: 54px;
+    padding-bottom: 54px;
+  }
 
   &__container {
     padding-top: 40px;

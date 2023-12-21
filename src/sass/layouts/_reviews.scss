@@ -1,11 +1,16 @@
 .reviews {
-  background: linear-gradient(359deg, #141a19 7.33%, rgba(0, 0, 0, 0) 77.68%),
-    linear-gradient(180deg, #141a19 -2.08%, rgba(0, 0, 0, 0) 84.14%),
-    url(/src/images/unsplash_X4c7EiLf8GE.jpg);
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: center bottom;
   padding-bottom: 32px;
+
+  &__bg {
+    background: linear-gradient(359deg, #141a19 7.33%, rgba(0, 0, 0, 0) 77.68%),
+      linear-gradient(180deg, #141a19 -2.08%, rgba(0, 0, 0, 0) 84.14%),
+      url(/src/images/unsplash_X4c7EiLf8GE.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    padding-top: 32px;
+  }
+
   &__wrapper {
     width: 100%;
     min-height: 343px;
@@ -13,10 +18,11 @@
     padding: 32px;
     display: grid;
     grid-template-columns: 80px 24px 1fr;
-    grid-template-rows: 35px 10px 35px 32px 1fr 38px;
+    grid-template-rows: 35px 10px 35px 32px 1fr;
   }
 
   &__avatar {
+    border-radius: 50%;
     grid-column: 1 / 2;
     grid-row: 1 / 4;
   }

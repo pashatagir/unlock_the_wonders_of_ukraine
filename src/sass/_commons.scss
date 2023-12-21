@@ -9,9 +9,6 @@ body {
 
 section:not(:first-of-type) {
   padding-top: 80px;
-  &:last-of-type {
-    padding-top: 54px;
-  }
 }
 
 .title {
