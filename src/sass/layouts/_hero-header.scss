@@ -57,3 +57,37 @@
   @include flex(flex, space-between, center);
   gap: 15px;
 }
+
+.mobile-menu {
+  position: relative;
+  z-index: 1;
+  top: calc(-100vh - 62px);
+  width: 100%;
+  height: 100vh;
+  padding-top: 16px;
+  background: url(/src/images/unsplash_X4c7EiLf8GE.jpg) $backgroundColor;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center bottom, center top;
+  transition: transform 1000ms $mainTransitionTimingFunction;
+
+  &__wrapper {
+    @include flex(flex, space-between, center);
+    margin-bottom: 198px;
+  }
+  &__navigation > .navigation__list {
+    margin-top: 0;
+    text-align: center;
+    padding: 7.25px;
+    font-family: $secondaryFontFamily;
+    font-weight: secondFontWeight;
+    @include font(18, 1.4, 0.18);
+  }
+}
+
+.is-open {
+  transform: translateY(100vh);
+}
+.no-scroll {
+  overflow: hidden;
+}

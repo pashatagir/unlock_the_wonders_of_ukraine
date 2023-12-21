@@ -2,12 +2,8 @@
   padding-bottom: 32px;
 
   &__bg {
-    background: linear-gradient(359deg, #141a19 7.33%, rgba(0, 0, 0, 0) 77.68%),
-      linear-gradient(180deg, #141a19 -2.08%, rgba(0, 0, 0, 0) 84.14%),
-      url(/src/images/unsplash_X4c7EiLf8GE.jpg);
-    background-repeat: no-repeat;
+    background: url(/src/images/unsplash_X4c7EiLf8GE.jpg) center no-repeat;
     background-size: auto;
-    background-position: center;
     padding-top: 32px;
   }
 
