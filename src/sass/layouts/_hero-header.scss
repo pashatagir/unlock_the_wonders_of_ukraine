@@ -91,3 +91,17 @@
 .no-scroll {
   overflow: hidden;
 }
+
+.back-to-home {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 1px solid $primaryColor;
+  fill: $primaryColor;
+  opacity: 0.35;
+  background-color: transparent;
+  position: fixed;
+  z-index: 1;
+  bottom: 0px;
+  left: 89vw;
+}

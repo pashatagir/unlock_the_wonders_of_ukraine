@@ -1,3 +1,4 @@
 import './sass/index.scss';
-import './js/slider';
+import './js/swiperSlider';
 import './js/mobileMenu';
+import './js/backToHome';

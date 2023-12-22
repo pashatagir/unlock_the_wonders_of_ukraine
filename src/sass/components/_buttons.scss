@@ -5,6 +5,7 @@ button {
   color: $primaryColor;
   border: none;
   outline: none;
+  cursor: pointer;
   @include flex(flex, center, center);
   @include font(16, 1.5, 0.206);
   transition: color $timingAnima, background-color $timingAnima, border-color $timingAnima;
