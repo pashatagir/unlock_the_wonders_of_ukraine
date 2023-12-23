@@ -5,7 +5,6 @@ const menuLinksEl = document.querySelectorAll('.mobile-menu__link');
 menuButtonEl.forEach(item =>
   item.addEventListener('click', e => {
     menuEl.classList.toggle('is-open');
-    // menuEl
     document.body.classList.toggle('no-scroll');
   })
 );

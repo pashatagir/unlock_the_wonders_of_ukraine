@@ -13,7 +13,7 @@
 @mixin mq($range) {
   $mobile: 375px;
   $tablet: 835px;
-  $desktop: 1440px;
+  $desktop: 1200px;
 
   @if $range == mobile-only {
     @media screen and (max-width: ($tablet - 0.02)) {

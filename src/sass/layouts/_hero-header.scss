@@ -9,18 +9,36 @@
 }
 
 .hero {
-  background: linear-gradient(180deg, #141a19 -14.61%, rgba(0, 0, 0, 0) 24.08%),
-    radial-gradient(54.53% 54.53% at 56.24% 51.15%, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 100%),
-    url(/src/images/hero_bg.jpg);
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: center;
+  @include mq(mobile-only) {
+    background: url(/src/images/hero_bg.jpg) no-repeat center;
+    background-size: cover;
+    @include mq(retina) {
+      background: url(/src/images/hero_bg_retina.jpg) no-repeat center;
+      background-size: cover;
+    }
+    padding-top: 261px;
+    padding-bottom: 32px;
+  }
+  @include mq(tablet-only) {
+    background: url(/src/images/hero_bg_tablet_1x.jpg) no-repeat center;
+    background-size: cover;
+    @include mq(retina) {
+      background: url(/src/images/hero_bg_tablet_2x.jpg) no-repeat center;
+      background-size: cover;
+    }
+  }
+  @include mq(desktop) {
+    background: url(/src/images/hero_bg_des_1x.jpg) no-repeat center;
+    background-size: cover;
+    @include mq(retina) {
+      background: url(/src/images/hero_bg_des_2x.jpg) no-repeat center;
+      background-size: cover;
+    }
+  }
 
   &__container {
     @include flex(flex, null, center);
     flex-direction: column;
-    padding-top: 261px;
-    padding-bottom: 32px;
   }
 
   &__title {
@@ -93,7 +111,7 @@
   overflow: hidden;
 }
 
-.back-to-home {
+.to-top {
   padding-top: 7px;
   width: 40px;
   height: 40px;

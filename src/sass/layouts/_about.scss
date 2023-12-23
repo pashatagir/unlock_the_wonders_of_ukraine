@@ -1,8 +1,28 @@
 .about {
-  background: url(/src/images/map.png);
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-position: center;
+  @include mq(mobile-only) {
+    background: url(/src/images/map.png) no-repeat center;
+    background-size: contain;
+    @include mq(retina) {
+      background: url(/src/images/map_2x.png) no-repeat center;
+      background-size: contain;
+    }
+  }
+  @include mq(tablet) {
+    background: url(/src/images/map_tablet_1x.png) no-repeat center;
+    background-size: contain;
+    @include mq(retina) {
+      background: url(/src/images/map_tablet_2x.png) no-repeat center;
+      background-size: contain;
+    }
+  }
+  @include mq(desktop) {
+    background: url(/src/images/map_des_1x.png) no-repeat center;
+    background-size: contain;
+    @include mq(retina) {
+      background: url(/src/images/map_des_2x.png) no-repeat center;
+      background-size: contain;
+    }
+  }
 
   &__title {
     @include font(40, 1.15, 0.4);

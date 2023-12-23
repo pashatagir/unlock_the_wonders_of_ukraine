@@ -1,5 +1,4 @@
-// Set a variable for our button element.
-const backHomeEl = document.querySelector('.back-to-home');
+const backHomeEl = document.querySelector('.to-top');
 const anchorEl = document.querySelectorAll('a[href^="#"]');
 
 anchorEl.forEach(anchor => {
