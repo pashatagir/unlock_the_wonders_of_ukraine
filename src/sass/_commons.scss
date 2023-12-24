@@ -9,6 +9,33 @@ body {
 
 section:not(:first-of-type) {
   padding-top: 80px;
+  @include mq(tablet) {
+    padding-top: 100px;
+  }
+}
+
+.container {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include mq(mobile) {
+    width: 375px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include mq(tablet) {
+    width: 835px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include mq(desktop) {
+    width: 1440px;
+  }
 }
 
 .title {
@@ -16,6 +43,10 @@ section:not(:first-of-type) {
   @include font(40, 1.4, 0.4);
   font-weight: $fontWeight;
   margin-bottom: 32px;
+  @include mq(tablet) {
+    @include font(64, 1.4, 0.64);
+    margin-bottom: 64px;
+  }
 }
 
 p {
@@ -23,12 +54,19 @@ p {
   @include font(16, 1.4, 0.16);
 }
 
-.copyright {
-  font-family: $mainFontFamily;
-  @include font(12, 1.4, 0.12);
-  text-align: center;
-}
-
 .pagination {
   @include flex(flex, space-between, center);
+}
+
+$timingAnima: $mainTransitionDuration $mainTransitionTimingFunction;
+button {
+  padding: 0;
+  background-color: $btnColor;
+  color: $primaryColor;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  @include flex(flex, center, center);
+  @include font(16, 1.5, 0.206);
+  transition: color $timingAnima, background-color $timingAnima, border-color $timingAnima;
 }

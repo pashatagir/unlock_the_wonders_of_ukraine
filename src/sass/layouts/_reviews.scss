@@ -1,9 +1,12 @@
 .reviews {
   padding-bottom: 32px;
+  @include mq(tablet) {
+    padding-bottom: 57px;
+  }
 
   &__bg {
     @include mq(mobile-only) {
-      background: url(/src/images/reviews_bg_1x.jpg) center no-repeat;
+      background: url(/src/images/reviews_bg_1x.jpg) no-repeat center;
       background-size: cover;
       @include mq(retina) {
         background: url(/src/images/reviews_bg_2x.jpg) no-repeat center;
@@ -12,12 +15,13 @@
       padding-top: 32px;
     }
     @include mq(tablet) {
-      background: url(/src/images/reviews_bg_tab_1x.jpg) center no-repeat;
+      background: url(/src/images/reviews_bg_tab_1x.jpg) no-repeat center;
       background-size: cover;
       @include mq(retina) {
         background: url(/src/images/reviews_bg_tab_2x.jpg) no-repeat center;
         background-size: cover;
       }
+      padding-top: 58px;
     }
     @include mq(desktop) {
       background: url(/src/images/reviews_bg_des_1x.jpg) no-repeat center;
@@ -27,12 +31,21 @@
         background-size: cover;
       }
     }
+    & > .reviews__container {
+      @include mq(tablet) {
+        padding-right: 0;
+      }
+    }
   }
 
   &__wrapper {
-    width: 100%;
     min-height: 343px;
+    @include mq(tablet) {
+      width: 320px;
+      height: 352px;
+    }
     border: 1px solid $primaryColor;
+    border-radius: 4px;
     padding: 32px;
     display: grid;
     grid-template-columns: 80px 24px 1fr;
@@ -52,8 +65,7 @@
   }
 
   &__rating {
-    display: grid;
-    grid-template-columns: repeat(5, 24px);
+    display: flex;
     gap: 4px;
     grid-column: 3/4;
     grid-row: 3 / 4;
@@ -62,5 +74,6 @@
   &__text {
     grid-column: 1/4;
     grid-row: 5/6;
+    overflow-y: overlay;
   }
 }

@@ -1,10 +1,45 @@
 .footer {
   padding: 96px 0px 16px;
+
   &__social-list {
     margin: 32px 0px 64px;
     @include flex(flex, start, center);
     gap: 15px;
+    @include mq(tablet) {
+      justify-content: flex-end;
+      margin-top: 40px;
+    }
   }
+
+  &__container {
+    @include mq(tablet) {
+      @include flex(flex, space-between, flex-start);
+    }
+  }
+
+  &__navigation {
+    @include mq(tablet) {
+      @include flex(flex, null, flex-start);
+    }
+  }
+
+  &__logo {
+    @include mq(tablet) {
+      margin-right: 148px;
+    }
+  }
+  &__logo__icon {
+    @include mq(tablet) {
+      width: 169px;
+      height: 125px;
+    }
+  }
+}
+
+.copyright {
+  font-family: $mainFontFamily;
+  @include font(12, 1.4, 0.12);
+  text-align: center;
 }
 
 .navigation__list,
@@ -15,4 +50,13 @@
   gap: 8px;
   @include font(16, 1.38, 0.16);
   font-style: normal;
+  @include mq(tablet) {
+    @include font(18, 1.38, 0.18);
+    margin-top: 0;
+    gap: 16px;
+  }
+}
+
+.wrapper__info {
+  text-align: right;
 }

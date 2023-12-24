@@ -1,0 +1,62 @@
+.swiper__navigation {
+  margin-top: 32px;
+  @include flex(flex, space-between, center);
+
+  &--padding {
+    padding: 0 16px;
+    @include mq(tablet) {
+      @include flex(flex, space-evenly, center);
+      margin-top: 76px;
+    }
+  }
+  &--margin {
+    @include mq(tablet) {
+      margin-top: 64px;
+    }
+  }
+  &--large-margin {
+    @include mq(tablet) {
+      margin-top: 97px;
+      padding-right: 32px;
+    }
+  }
+}
+
+.swiper-slide__image {
+  border-radius: 4px;
+}
+
+.swiper-button > svg {
+  width: 114px;
+  @include mq(tablet) {
+    width: 144px;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: transparent;
+}
+
+.swiper-button-prev {
+  rotate: 180deg;
+}
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  opacity: 0.35;
+  cursor: auto;
+  pointer-events: none;
+}
+
+.swiper-wrapper > .reviews__swiper-slide {
+  @include mq(tablet) {
+    flex-shrink: 1;
+  }
+}
+
+.swiper-wrapper > .gallery__swiper-slide {
+  @include mq(tablet) {
+    margin: 0 auto;
+    width: 50%;
+  }
+}

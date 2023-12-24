@@ -1,17 +1,70 @@
-.tours__paragraph {
-  margin-bottom: 16px;
+.tours__container {
+  @include mq(tablet) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      'subtitle  subtitle  subtitle'
+      'paragraph paragraph title_list'
+      'button  button  button';
+  }
 }
 
 .tours__subtitle {
   @include font(24, 1.4, 0.24);
   font-weight: $fontWeight;
   margin: 16px 0px;
+  @include mq(tablet) {
+    grid-area: subtitle;
+    margin: 40px 0px 24px;
+  }
+}
+
+.wrapper-description {
+  grid-area: paragraph;
+}
+
+.tours__wrapper {
+  @include mq(tablet) {
+    grid-area: title_list;
+  }
+}
+
+.tours__link {
+  @include mq(mobile) {
+    padding: 14px calc(50% - 23px) 14px calc(50% - 16px);
+  }
+  @include font(16, 1.5, 0.206);
+  background-color: $btnColor;
+  padding: 12px 64px;
+  border-radius: 4px;
+  grid-area: button;
+}
+
+.tours__button {
+  @include mq(mobile) {
+    width: 100%;
+    background-color: $btnColor;
+    padding: 14px 0px;
+    border-radius: 4px;
+  }
+}
+
+.tours__paragraph {
+  margin-bottom: 16px;
+  @include mq(tablet) {
+    margin-bottom: 55px;
+    margin-right: 32px;
+  }
 }
 
 .tours__description-list {
   list-style: disc;
   margin-bottom: 18px;
   padding: 0 16px;
+  @include mq(tablet) {
+    margin-bottom: 55px;
+    margin-right: 32px;
+  }
 }
 
 .tours__description-item {
@@ -24,6 +77,7 @@
   @include font(18, 1.4, 0.18);
   font-weight: $fontWeight;
 }
+
 .tours__list {
   margin-bottom: 33px;
 }
@@ -36,16 +90,4 @@
   &:not(:last-of-type) {
     margin-bottom: 9px;
   }
-}
-
-.tours__link {
-  @include font(16, 1.5, 0.206);
-  padding: 14px calc(50% - 23px) 14px calc(50% - 16px);
-}
-
-.tours__button {
-  width: 100%;
-  background-color: $btnColor;
-  padding: 14px 0px;
-  border-radius: 4px;
 }

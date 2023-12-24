@@ -6,6 +6,28 @@
     padding-top: 16px;
     @include flex(flex, space-between, center);
   }
+
+  &__button {
+    background-color: transparent;
+  }
+
+  &__button--hidden,
+  .mobile-menu {
+    @include mq(tablet) {
+      @include visually-hidden();
+    }
+  }
+
+  &__navigation__list {
+    @include mq(mobile-only) {
+      @include visually-hidden();
+    }
+    @include flex(flex, end, center);
+    gap: 32px;
+    @include font(18, 1.4, 0.18);
+    font-family: $secondaryFontFamily;
+    font-weight: $secondFontWeight;
+  }
 }
 
 .hero {
@@ -19,13 +41,15 @@
     padding-top: 261px;
     padding-bottom: 32px;
   }
-  @include mq(tablet-only) {
+  @include mq(tablet) {
     background: url(/src/images/hero_bg_tablet_1x.jpg) no-repeat center;
     background-size: cover;
     @include mq(retina) {
       background: url(/src/images/hero_bg_tablet_2x.jpg) no-repeat center;
       background-size: cover;
     }
+    padding-top: 318px;
+    padding-bottom: 64px;
   }
   @include mq(desktop) {
     background: url(/src/images/hero_bg_des_1x.jpg) no-repeat center;
@@ -34,6 +58,8 @@
       background: url(/src/images/hero_bg_des_2x.jpg) no-repeat center;
       background-size: cover;
     }
+    padding-top: 206px;
+    padding-bottom: 100px;
   }
 
   &__container {
@@ -44,11 +70,22 @@
   &__title {
     @include flex(flex, null, center);
     flex-direction: column;
-    @include font(64, 1.4, 0.64);
-    margin-bottom: 64px;
+    @include mq(mobile-only) {
+      @include font(64, 1.4, 0.64);
+      margin-bottom: 64px;
+    }
+    @include mq(tablet) {
+      @include font(128, 1.4, 1.28);
+      margin-bottom: 54px;
+    }
 
     & > span {
-      @include font(24, 1.4, 0.24);
+      @include mq(mobile-only) {
+        @include font(24, 1.4, 0.24);
+      }
+      @include mq(tablet) {
+        @include font(48, 1.4, 0.48);
+      }
     }
 
     &::after {
@@ -59,6 +96,9 @@
       -webkit-text-fill-color: transparent;
       transform: rotateX(180deg) translateY(-136px);
       position: absolute;
+      @include mq(tablet) {
+        transform: rotateX(180deg) translateY(-255px);
+      }
     }
   }
 
@@ -69,12 +109,20 @@
     margin-bottom: 226px;
     background-color: $btnColor;
     @include font(16, 1.4, 0.16);
+    @include mq(tablet-only) {
+      padding: 16px 52px;
+      margin-bottom: 135px;
+    }
   }
 }
 
 .social-list {
   @include flex(flex, space-between, center);
   gap: 15px;
+  @include mq(tablet) {
+    flex-direction: column;
+    align-self: end;
+  }
 }
 
 .mobile-menu {

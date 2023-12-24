@@ -1,3 +1,16 @@
+@mixin visually-hidden() {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
 @mixin font($fs, $lh, $ls) {
   font-size: $fs + px;
   line-height: $lh;
@@ -12,8 +25,8 @@
 
 @mixin mq($range) {
   $mobile: 375px;
-  $tablet: 835px;
-  $desktop: 1200px;
+  $tablet: 768px;
+  $desktop: 1440px;
 
   @if $range == mobile-only {
     @media screen and (max-width: ($tablet - 0.02)) {
