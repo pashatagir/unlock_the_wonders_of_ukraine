@@ -58,5 +58,7 @@
 }
 
 .wrapper__info {
-  text-align: right;
+  @include mq(tablet) {
+    text-align: right;
+  }
 }

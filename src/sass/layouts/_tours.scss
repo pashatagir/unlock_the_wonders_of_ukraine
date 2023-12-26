@@ -1,47 +1,59 @@
-.tours__container {
+.tour__container {
+  display: grid;
+  grid-template-areas: 'subtitle' 'paragraph' 'title_list' 'button' 'button';
+  // grid-template-rows: minmax() minmax() 168px 54px;
+  padding-inline: 16px;
   @include mq(tablet) {
+    padding-inline: 32px;
+  }
+
+  @include mq(tablet-only) {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    column-gap: 32px;
+    grid-template-columns: 496px 1fr;
     grid-template-areas:
-      'subtitle  subtitle  subtitle'
-      'paragraph paragraph title_list'
-      'button  button  button';
+      'subtitle subtitle'
+      'paragraph title_list'
+      'button button';
   }
 }
 
-.tours__subtitle {
+.tour__title {
+  text-align: left;
   @include font(24, 1.4, 0.24);
   font-weight: $fontWeight;
   margin: 16px 0px;
-  @include mq(tablet) {
-    grid-area: subtitle;
+  grid-area: subtitle;
+  @include mq(tablet-only) {
     margin: 40px 0px 24px;
+  }
+  @include mq(desktop) {
+    margin: 106px 0px 32px;
   }
 }
 
-.wrapper-description {
+.tour__description {
   grid-area: paragraph;
 }
 
-.tours__wrapper {
-  @include mq(tablet) {
-    grid-area: title_list;
-  }
+.tour__wrapper {
+  grid-area: title_list;
 }
 
-.tours__link {
-  @include mq(mobile) {
-    padding: 14px calc(50% - 23px) 14px calc(50% - 16px);
-  }
+.tour__link {
   @include font(16, 1.5, 0.206);
   background-color: $btnColor;
   padding: 12px 64px;
   border-radius: 4px;
   grid-area: button;
+
+  @include mq(mobile-only) {
+    padding: 14px calc(50% - 23px) 14px calc(50% - 16px);
+  }
 }
 
-.tours__button {
-  @include mq(mobile) {
+.tour__button {
+  @include mq(mobile-only) {
     width: 100%;
     background-color: $btnColor;
     padding: 14px 0px;
@@ -49,39 +61,34 @@
   }
 }
 
-.tours__paragraph {
+.tour__paragraph,
+.tour__description__list {
   margin-bottom: 16px;
-  @include mq(tablet) {
+  @include mq(tablet-only) {
     margin-bottom: 55px;
-    margin-right: 32px;
   }
 }
 
-.tours__description-list {
+.tour__description__list {
   list-style: disc;
-  margin-bottom: 18px;
-  padding: 0 16px;
-  @include mq(tablet) {
-    margin-bottom: 55px;
-    margin-right: 32px;
-  }
+  padding-left: 16px;
 }
 
-.tours__description-item {
+.tour__description__item {
   font-family: $secondaryFontFamily;
   @include font(16, 1.4, 0.16);
 }
 
-.tours__title-list {
+.title-list {
   margin-bottom: 17px;
   @include font(18, 1.4, 0.18);
   font-weight: $fontWeight;
 }
 
-.tours__list {
+.ness-list {
   margin-bottom: 33px;
 }
-.tours__item {
+.ness-item {
   @include flex(flex, start, center);
   gap: 16px;
   font-family: $secondaryFontFamily;

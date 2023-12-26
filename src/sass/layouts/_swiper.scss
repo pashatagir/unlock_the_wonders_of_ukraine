@@ -1,3 +1,8 @@
+.gallery__container {
+  @include mq(desktop) {
+    padding-right: 0;
+  }
+}
 .swiper__navigation {
   margin-top: 32px;
   @include flex(flex, space-between, center);
@@ -12,6 +17,9 @@
   &--margin {
     @include mq(tablet) {
       margin-top: 64px;
+      @include mq(desktop) {
+        padding-right: 32px;
+      }
     }
   }
   &--large-margin {
@@ -24,6 +32,7 @@
 
 .swiper-slide__image {
   border-radius: 4px;
+  margin: 0 auto;
 }
 
 .swiper-button > svg {
@@ -55,8 +64,11 @@
 }
 
 .swiper-wrapper > .gallery__swiper-slide {
-  @include mq(tablet) {
+  @include mq(tablet-only) {
+    width: 377px;
+  }
+  @include mq(desktop) {
     margin: 0 auto;
-    width: 50%;
+    width: 400px;
   }
 }

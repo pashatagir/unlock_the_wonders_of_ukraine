@@ -27,31 +27,31 @@
           </ul>
         </nav>
       </div>
-      <div class="mobile-menu">
-        <div class="container">
-          <nav class="navigation mobile-menu__navigation">
-            <div class="mobile-menu__wrapper">
-              <a href="#header" class="mobile-menu__link">
-                <svg width="64" height="46">
-                  <use href="./images/sprite.svg#icon-logo"></use>
-                </svg>
-              </a>
-              <button type="button" class="header__button">
-                <svg width="40" height="40">
-                  <use href="./images/sprite.svg#x"></use>
-                </svg>
-              </button>
-            </div>
-            <ul class="navigation__list navigation__list--margin">
-              <li><a href="#about" class="mobile-menu__link">About us</a></li>
-              <li><a href="#tours" class="mobile-menu__link">Tours</a></li>
-              <li><a href="#gallery" class="mobile-menu__link">Gallery</a></li>
-              <li><a href="#contacts" class="mobile-menu__link">Contacts</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
     </header>
+    <div class="mobile-menu">
+      <div class="container">
+        <nav class="navigation mobile-menu__navigation">
+          <div class="mobile-menu__wrapper">
+            <a href="#header" class="mobile-menu__link">
+              <svg width="64" height="46">
+                <use href="./images/sprite.svg#icon-logo"></use>
+              </svg>
+            </a>
+            <button type="button" class="header__button">
+              <svg width="40" height="40">
+                <use href="./images/sprite.svg#x"></use>
+              </svg>
+            </button>
+          </div>
+          <ul class="navigation__list navigation__list--margin">
+            <li><a href="#about" class="mobile-menu__link">About us</a></li>
+            <li><a href="#tours" class="mobile-menu__link">Tours</a></li>
+            <li><a href="#gallery" class="mobile-menu__link">Gallery</a></li>
+            <li><a href="#contacts" class="mobile-menu__link">Contacts</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
     <main>
       <section class="hero">
         <div class="container hero__container">
@@ -119,353 +119,500 @@
         </div>
       </section>
       <section class="tours" id="tours">
-        <h2 class="title tours__title">Our tours</h2>
-        <div class="swiper swiper-tour">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <picture>
-                <source
-                  media="(max-width: 376px)"
-                  srcset="./images/tour1.jpg 1x, ./images/tour1_2x.jpg 2x"
-                  type="image/jpg"
-                />
-                <source
-                  media="(max-width: 1439px)"
-                  srcset="./images/tour1_tablet_1x.jpg 1x, ./images/tour1_tablet_2x.jpg 2x"
-                  type="image/jpg"
-                />
-                <source
-                  media="(min-width: 1440px)"
-                  srcset="./images/tour1_des_1x.jpg 1x, ./images/tour1_des_2x.jpg 2x"
-                  type="image/jpg"
-                />
-                <img src="./images/tour1.jpg" alt="lake synevir" class="swiper-slide__image" />
-              </picture>
-              <div class="container tours__container">
-                <h3 class="tours__subtitle">Lake Synevyr and Shipit waterfall</h3>
-                <div class="wrapper-description">
-                  <p class="tours__paragraph">
-                    This very interesting excursion will introduce you to the most beautiful lake of
-                    the Carpathians "Synevyr", the impressive and magical waterfall lake Synevirm
-                    "Shypit", which is also located in the Ukrainian Carpathians. You will have the
-                    opportunity to try Soymivska and Kelechynska mineral springs, drinks and
-                    delicious dishes of Carpathian cuisine and, of course, admire the beautiful
-                    scenery of the unique Ukrainian Carpathians.
-                  </p>
+        <div class="container tours__container">
+          <h2 class="title tours__title">Our tours</h2>
+          <div class="swiper tours__swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide tours__swiper-slide">
+                <picture>
+                  <source
+                    media="(max-width: 834px)"
+                    srcset="./images/tour1.jpg 1x, ./images/tour1_2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 835px)"
+                    srcset="./images/tour1_tablet_1x.jpg 1x, ./images/tour1_tablet_2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="./images/tour1_des_1x.jpg 1x, ./images/tour1_des_2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/tour1.jpg"
+                    srcset="./images/tour1.jpg 1x, ./images/tour1_2x.jpg 2x"
+                    alt="lake synevir"
+                    class="swiper-slide__image"
+                  />
+                </picture>
+                <div class="tour tour__container">
+                  <h3 class="title tour__title">Lake Synevyr and Shipit waterfall</h3>
+                  <div class="tour__description">
+                    <p class="tour__paragraph">
+                      This very interesting excursion will introduce you to the most beautiful lake
+                      of the Carpathians "Synevyr", the impressive and magical waterfall lake
+                      Synevirm "Shypit", which is also located in the Ukrainian Carpathians. You
+                      will have the opportunity to try Soymivska and Kelechynska mineral springs,
+                      drinks and delicious dishes of Carpathian cuisine and, of course, admire the
+                      beautiful scenery of the unique Ukrainian Carpathians.
+                    </p>
+                  </div>
+                  <div class="tour__wrapper">
+                    <h4 class="title-list">Included:</h4>
+                    <ul class="ness-list">
+                      <li class="ness-item">
+                        <svg width="24" height="24"><use href="./images/sprite.svg#bus"></use></svg>
+                        Transfer
+                      </li>
+                      <li class="ness-item">
+                        <svg width="24" height="24">
+                          <use href="./images/sprite.svg#idcard"></use>
+                        </svg>
+                        Travel insurance
+                      </li>
+                      <li class="ness-item">
+                        <svg width="24" height="24">
+                          <use href="./images/sprite.svg#face"></use>
+                        </svg>
+                        Professional guide
+                      </li>
+                      <li class="ness-item">
+                        <svg width="24" height="24">
+                          <use href="./images/sprite.svg#ticket"></use>
+                        </svg>
+                        Travel ticket
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tour__button">
+                    <a href="#start" class="tour__link">Book</a>
+                  </div>
                 </div>
-                <div class="tours__wrapper">
-                  <h4 class="tours__title-list">Included:</h4>
-                  <ul class="tours__list">
-                    <li class="tours__item">
-                      <svg width="24" height="24"><use href="./images/sprite.svg#bus"></use></svg>
-                      Transfer
-                    </li>
-                    <li class="tours__item">
-                      <svg width="24" height="24">
-                        <use href="./images/sprite.svg#idcard"></use>
-                      </svg>
-                      Travel insurance
-                    </li>
-                    <li class="tours__item">
-                      <svg width="24" height="24"><use href="./images/sprite.svg#face"></use></svg>
-                      Professional guide
-                    </li>
-                    <li class="tours__item">
-                      <svg width="24" height="24">
-                        <use href="./images/sprite.svg#ticket"></use>
-                      </svg>
-                      Travel ticket
-                    </li>
-                  </ul>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source
+                    media="(max-width: 834px)"
+                    srcset="./images/tour2.jpg 1x, ./images/tour2_2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 835px)"
+                    srcset="./images/tour2_tablet_1x.jpg 1x, ./images/tour2_tablet_2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="./images/tour2_des_1x.jpg 1x, ./images/tour2_des_2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/tour2.jpg"
+                    srcset="./images/tour2.jpg 1x, ./images/tour2_2x.jpg 2x"
+                    alt="lake synevir"
+                    class="swiper-slide__image"
+                  />
+                </picture>
+                <div class="tour tour__container">
+                  <h3 class="title tour__title">Black Sea Jewel</h3>
+                  <div class="tour__description">
+                    <ul class="tour__description__list">
+                      <li class="tour__description__item">
+                        Departure from Lviv (07:00) / Stryi (08:00)
+                      </li>
+                      <li class="tour__description__item">
+                        Pylypets (overview of Shipit waterfall and lunch)
+                      </li>
+                      <li class="tour__description__item">
+                        Synevyr Pass (photographing and viewing of Carpathian panoramas)
+                      </li>
+                      <li class="tour__description__item">
+                        "Synevyr" National Park (brown bear rehabilitation center and transition to
+                        the lake)
+                      </li>
+                      <li class="tour__description__item">Stryi (21:00)/Lviv (return by 22:00)</li>
+                    </ul>
+                  </div>
+                  <div class="tour__wrapper">
+                    <h4 class="title-list"></h4>
+                    <ul class="ness-list">
+                      <li class="ness-item">
+                        <svg width="24" height="24"><use href="./images/sprite.svg#bus"></use></svg>
+                        Transfer
+                      </li>
+                      <li class="ness-item">
+                        <svg width="24" height="24">
+                          <use href="./images/sprite.svg#idcard"></use>
+                        </svg>
+                        Travel insurance
+                      </li>
+                      <li class="ness-item">
+                        <svg width="24" height="24">
+                          <use href="./images/sprite.svg#face"></use>
+                        </svg>
+                        Professional guide
+                      </li>
+                      <li class="ness-item">
+                        <svg width="24" height="24">
+                          <use href="./images/sprite.svg#ticket"></use>
+                        </svg>
+                        Travel ticket
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tour__button">
+                    <a href="#start" class="tour__link">Book</a>
+                  </div>
                 </div>
-                <div class="tours__button">
-                  <a href="#start" class="tours__link">Book</a>
+              </div>
+              <div class="swiper-slide">
+                <picture>
+                  <source
+                    media="(max-width: 834px)"
+                    srcset="./images/tour3.jpg 1x, ./images/tour3_2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 835px)"
+                    srcset="./images/tour3_tablet_1x.jpg 1x, ./images/tour3_tablet_2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="./images/tour3_des_1x.jpg 1x, ./images/tour3_des_2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/tour3.jpg"
+                    srcset="./images/tour3.jpg 1x, ./images/tour3_2x.jpg 2x"
+                    alt="lake synevir"
+                    class="swiper-slide__image"
+                  />
+                </picture>
+                <div class="tour tour__container">
+                  <h3 class="title tour__title">Ancient History & Vibrant Present</h3>
+                  <div class="tour__description">
+                    <ul class="tour__description__list">
+                      <li class="tour__description__item">Departure from Kiev (08:00)</li>
+                      <li class="tour__description__item">
+                        St. Sophia's Cathedral (iconic UNESCO World Heritage site)
+                      </li>
+                      <li class="tour__description__item">
+                        Golden Gate (historical monument visit)
+                      </li>
+                      <li class="tour__description__item">
+                        Bessarabsky Market (tasting local delicacies)
+                      </li>
+                      <li class="tour__description__item">
+                        Kiev Pechersk Lavra (exploration of the significant monastery)
+                      </li>
+                      <li class="tour__description__item">Return to Kiev by 20:00</li>
+                    </ul>
+                  </div>
+                  <div class="tour__wrapper">
+                    <h4 class="title-list">Included:</h4>
+                    <ul class="ness-list">
+                      <li class="ness-item">
+                        <svg width="24" height="24"><use href="./images/sprite.svg#bus"></use></svg>
+                        Transfer
+                      </li>
+                      <li class="ness-item">
+                        <svg width="24" height="24">
+                          <use href="./images/sprite.svg#idcard"></use>
+                        </svg>
+                        Travel insurance
+                      </li>
+                      <li class="ness-item">
+                        <svg width="24" height="24">
+                          <use href="./images/sprite.svg#face"></use>
+                        </svg>
+                        Professional guide
+                      </li>
+                      <li class="ness-item">
+                        <svg width="24" height="24">
+                          <use href="./images/sprite.svg#ticket"></use>
+                        </svg>
+                        Travel ticket
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="tour__button">
+                    <a href="#start" class="tour__link">Book</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="swiper-slide">
-              <picture>
-                <source
-                  media="(max-width: 376px)"
-                  srcset="./images/tour2.jpg 1x, ./images/tour2_2x.jpg 2x"
-                  type="image/jpg"
-                />
-                <source
-                  media="(max-width: 1439px)"
-                  srcset="./images/tour2_tablet_1x.jpg 1x, ./images/tour2_tablet_2x.jpg 2x"
-                  type="image/jpg"
-                />
-                <source
-                  media="(min-width: 1440px)"
-                  srcset="./images/tour2_des_1x.jpg 1x, ./images/tour2_des_2x.jpg 2x"
-                  type="image/jpg"
-                />
-                <img src="./images/tour2.jpg" alt="lake synevir" class="swiper-slide__image" />
-              </picture>
-              <div class="container tours__container">
-                <h3 class="tours__subtitle">Black Sea Jewel</h3>
-                <div class="wrapper-description">
-                  <ul class="description-list tours__description-list">
-                    <li class="tours__description-item">
-                      Departure from Lviv (07:00) / Stryi (08:00)
-                    </li>
-                    <li class="tours__description-item">
-                      Pylypets (overview of Shipit waterfall and lunch)
-                    </li>
-                    <li class="tours__description-item">
-                      Synevyr Pass (photographing and viewing of Carpathian panoramas)
-                    </li>
-                    <li class="tours__description-item">
-                      "Synevyr" National Park (brown bear rehabilitation center and transition to
-                      the lake)
-                    </li>
-                    <li class="tours__description-item">Stryi (21:00)/Lviv (return by 22:00)</li>
-                  </ul>
-                </div>
-                <div class="tours__wrapper">
-                  <h4 class="tours__title-list">Included:</h4>
-                  <ul class="tours__list">
-                    <li class="tours__item">
-                      <svg width="24" height="24"><use href="./images/sprite.svg#bus"></use></svg>
-                      Transfer
-                    </li>
-                    <li class="tours__item">
-                      <svg width="24" height="24">
-                        <use href="./images/sprite.svg#idcard"></use>
-                      </svg>
-                      Travel insurance
-                    </li>
-                    <li class="tours__item">
-                      <svg width="24" height="24"><use href="./images/sprite.svg#face"></use></svg>
-                      Professional guide
-                    </li>
-                    <li class="tours__item">
-                      <svg width="24" height="24">
-                        <use href="./images/sprite.svg#ticket"></use>
-                      </svg>
-                      Travel ticket
-                    </li>
-                  </ul>
-                </div>
-                <div class="tours__button">
-                  <a href="#start" class="tours__link">Book</a>
-                </div>
-              </div>
+            <div class="swiper__navigation swiper__navigation--padding">
+              <button type="button" class="swiper-button swiper-button-prev">
+                <svg height="24">
+                  <use href="./images/sprite.svg#active-arrow"></use>
+                </svg>
+              </button>
+              <button type="button" class="swiper-button swiper-button-next">
+                <svg height="24">
+                  <use href="./images/sprite.svg#active-arrow"></use>
+                </svg>
+              </button>
             </div>
-            <div class="swiper-slide">
-              <picture>
-                <source
-                  media="(max-width: 376px)"
-                  srcset="./images/tour3.jpg 1x, ./images/tour3_2x.jpg 2x"
-                  type="image/jpg"
-                />
-                <source
-                  media="(max-width: 1439px)"
-                  srcset="./images/tour3_tablet_1x.jpg 1x, ./images/tour3_tablet_2x.jpg 2x"
-                  type="image/jpg"
-                />
-                <source
-                  media="(min-width: 1440px)"
-                  srcset="./images/tour3_des_1x.jpg 1x, ./images/tour3_des_2x.jpg 2x"
-                  type="image/jpg"
-                />
-                <img src="./images/tour3.jpg" alt="lake synevir" class="swiper-slide__image" />
-              </picture>
-              <div class="container tours__container">
-                <h3 class="tours__subtitle">Ancient History & Vibrant Present</h3>
-                <div class="wrapper-description">
-                  <ul class="description-list tours__description-list">
-                    <li class="tours__description-item">Departure from Kiev (08:00)</li>
-                    <li class="tours__description-item">
-                      St. Sophia's Cathedral (iconic UNESCO World Heritage site)
-                    </li>
-                    <li class="tours__description-item">Golden Gate (historical monument visit)</li>
-                    <li class="tours__description-item">
-                      Bessarabsky Market (tasting local delicacies)
-                    </li>
-                    <li class="tours__description-item">
-                      Kiev Pechersk Lavra (exploration of the significant monastery)
-                    </li>
-                    <li class="tours__description-item">Return to Kiev by 20:00</li>
-                  </ul>
-                </div>
-                <div class="tours__wrapper">
-                  <h4 class="tours__title-list">Included:</h4>
-                  <ul class="tours__list">
-                    <li class="tours__item">
-                      <svg width="24" height="24"><use href="./images/sprite.svg#bus"></use></svg>
-                      Transfer
-                    </li>
-                    <li class="tours__item">
-                      <svg width="24" height="24">
-                        <use href="./images/sprite.svg#idcard"></use>
-                      </svg>
-                      Travel insurance
-                    </li>
-                    <li class="tours__item">
-                      <svg width="24" height="24"><use href="./images/sprite.svg#face"></use></svg>
-                      Professional guide
-                    </li>
-                    <li class="tours__item">
-                      <svg width="24" height="24">
-                        <use href="./images/sprite.svg#ticket"></use>
-                      </svg>
-                      Travel ticket
-                    </li>
-                  </ul>
-                </div>
-                <div class="tours__button">
-                  <a href="#start" class="tours__link">Book</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper__navigation swiper__navigation--padding">
-            <button type="button" class="swiper-button swiper-button-prev">
-              <svg height="24">
-                <use href="./images/sprite.svg#active-arrow"></use>
-              </svg>
-            </button>
-            <button type="button" class="swiper-button swiper-button-next">
-              <svg height="24">
-                <use href="./images/sprite.svg#active-arrow"></use>
-              </svg>
-            </button>
           </div>
         </div>
       </section>
       <section class="gallery" id="gallery">
-        <div class="container">
+        <div class="container gallery__container">
           <h2 class="title gallery__title">Gallery</h2>
           <div class="swiper swiper-gallery">
             <div class="swiper-wrapper">
-              <picture class="swiper-slide gallery__swiper-slide">
-                <source
-                  media="(max-width: 376px)"
-                  srcset="./images/gallery_image_m_1x.jpg 1x, ./images/gallery_image_m_2x.jpg 2x"
-                />
-                <source
-                  media="(max-width: 1439px)"
-                  srcset="./images/gallery_image_1x.jpg 1x, ./images/gallery_image_2x.jpg 2x"
-                />
-                <img
-                  src="./images/gallery_image_m_1x.jpg"
-                  alt="winter forest"
-                  class="swiper-slide__image"
-                />
-              </picture>
+              <div class="swiper-slide gallery__swiper-slide">
+                <picture>
+                  <source
+                    media="(max-width: 834px)"
+                    srcset="./images/gallery_image_m_1x.jpg 1x, ./images/gallery_image_m_2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 835px)"
+                    srcset="./images/gallery_image_1x.jpg 1x, ./images/gallery_image_2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="./images/gallery_image_1x.jpg 1x, ./images/gallery_image_2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/gallery_image_m_1x.jpg"
+                    srcset="./images/gallery_image_m_1x.jpg 1x, ./images/gallery_image_m_2x.jpg 2x"
+                    alt="winter forest"
+                    class="swiper-slide__image"
+                  />
+                </picture>
+              </div>
 
-              <picture class="swiper-slide gallery__swiper-slide">
-                <source
-                  media="(max-width: 376px)"
-                  srcset="./images/gallery_image1_m_1x.jpg 1x, ./images/gallery_image1_m_2x.jpg 2x"
-                />
-                <source
-                  media="(max-width: 1439px)"
-                  srcset="./images/gallery_image1_1x.jpg 1x, ./images/gallery_image1_2x.jpg 2x"
-                />
-                <img
-                  src="./images/gallery_image1_m_1x.jpg"
-                  alt="forest"
-                  class="swiper-slide__image"
-                />
-              </picture>
+              <div class="swiper-slide gallery__swiper-slide">
+                <picture>
+                  <source
+                    media="(max-width: 834px)"
+                    srcset="
+                      ./images/gallery_image1_m_1x.jpg 1x,
+                      ./images/gallery_image1_m_2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 835px)"
+                    srcset="./images/gallery_image1_1x.jpg 1x, ./images/gallery_image1_2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="./images/gallery_image1_1x.jpg 1x, ./images/gallery_image1_2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/gallery_image1_m_1x.jpg"
+                    srcset="
+                      ./images/gallery_image1_m_1x.jpg 1x,
+                      ./images/gallery_image1_m_2x.jpg 2x
+                    "
+                    alt="forest"
+                    class="swiper-slide__image"
+                  />
+                </picture>
+              </div>
 
-              <picture class="swiper-slide gallery__swiper-slide">
-                <source
-                  media="(max-width: 376px)"
-                  srcset="./images/gallery_image2_m_1x.jpg 1x, ./images/gallery_image2_m_2x.jpg 2x"
-                />
-                <source
-                  media="(max-width: 1439px)"
-                  srcset="./images/gallery_image2_1x.jpg 1x, ./images/gallery_image2_2x.jpg 2x"
-                />
-                <img
-                  src="./images/gallery_image2_m_1x.jpg"
-                  alt="pink lake"
-                  class="swiper-slide__image"
-                />
-              </picture>
+              <div class="swiper-slide gallery__swiper-slide">
+                <picture>
+                  <source
+                    media="(max-width: 834px)"
+                    srcset="
+                      ./images/gallery_image2_m_1x.jpg 1x,
+                      ./images/gallery_image2_m_2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 835px)"
+                    srcset="./images/gallery_image2_1x.jpg 1x, ./images/gallery_image2_2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="./images/gallery_image2_1x.jpg 1x, ./images/gallery_image2_2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/gallery_image2_m_1x.jpg"
+                    srcset="
+                      ./images/gallery_image2_m_1x.jpg 1x,
+                      ./images/gallery_image2_m_2x.jpg 2x
+                    "
+                    alt="pink lake"
+                    class="swiper-slide__image"
+                  />
+                </picture>
+              </div>
 
-              <picture class="swiper-slide gallery__swiper-slide">
-                <source
-                  media="(max-width: 376px)"
-                  srcset="./images/gallery_image3_m_1x.jpg 1x, ./images/gallery_image3_m_2x.jpg 2x"
-                />
-                <source
-                  media="(max-width: 1439px)"
-                  srcset="./images/gallery_image3_1x.jpg 1x, ./images/gallery_image3_2x.jpg 2x"
-                />
-                <img
-                  src="./images/gallery_image3_m_1x.jpg"
-                  alt="forest and lake"
-                  class="swiper-slide__image"
-                />
-              </picture>
+              <div class="swiper-slide gallery__swiper-slide">
+                <picture>
+                  <source
+                    media="(max-width: 834px)"
+                    srcset="
+                      ./images/gallery_image3_m_1x.jpg 1x,
+                      ./images/gallery_image3_m_2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 835px)"
+                    srcset="./images/gallery_image3_1x.jpg 1x, ./images/gallery_image3_2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="./images/gallery_image3_1x.jpg 1x, ./images/gallery_image3_2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/gallery_image3_m_1x.jpg"
+                    srcset="
+                      ./images/gallery_image3_m_1x.jpg 1x,
+                      ./images/gallery_image3_m_2x.jpg 2x
+                    "
+                    alt="forest and lake"
+                    class="swiper-slide__image"
+                  />
+                </picture>
+              </div>
 
-              <picture class="swiper-slide gallery__swiper-slide">
-                <source
-                  media="(max-width: 376px)"
-                  srcset="./images/gallery_image4_m_1x.jpg 1x, ./images/gallery_image4_m_2x.jpg 2x"
-                />
-                <source
-                  media="(max-width: 1439px)"
-                  srcset="./images/gallery_image4_1x.jpg 1x, ./images/gallery_image4_2x.jpg 2x"
-                />
-                <img
-                  src="./images/gallery_image4_m_1x.jpg"
-                  alt="lake"
-                  class="swiper-slide__image"
-                />
-              </picture>
+              <div class="swiper-slide gallery__swiper-slide">
+                <picture>
+                  <source
+                    media="(max-width: 834px)"
+                    srcset="
+                      ./images/gallery_image4_m_1x.jpg 1x,
+                      ./images/gallery_image4_m_2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 835px)"
+                    srcset="./images/gallery_image4_1x.jpg 1x, ./images/gallery_image4_2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="./images/gallery_image4_1x.jpg 1x, ./images/gallery_image4_2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/gallery_image4_m_1x.jpg"
+                    srcset="
+                      ./images/gallery_image4_m_1x.jpg 1x,
+                      ./images/gallery_image4_m_2x.jpg 2x
+                    "
+                    alt="lake"
+                    class="swiper-slide__image"
+                  />
+                </picture>
+              </div>
 
-              <picture class="swiper-slide gallery__swiper-slide">
-                <source
-                  media="(max-width: 376px)"
-                  srcset="./images/gallery_image5_m_1x.jpg 1x, ./images/gallery_image5_m_2x.jpg 2x"
-                />
-                <source
-                  media="(max-width: 1439px)"
-                  srcset="./images/gallery_image5_1x.jpg 1x, ./images/gallery_image5_2x.jpg 2x"
-                />
-                <img
-                  src="./images/gallery_image5_m_1x.jpg"
-                  alt="castle"
-                  class="swiper-slide__image"
-                />
-              </picture>
+              <div class="swiper-slide gallery__swiper-slide">
+                <picture>
+                  <source
+                    media="(max-width: 834px)"
+                    srcset="
+                      ./images/gallery_image5_m_1x.jpg 1x,
+                      ./images/gallery_image5_m_2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 835px)"
+                    srcset="./images/gallery_image5_1x.jpg 1x, ./images/gallery_image5_2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="./images/gallery_image5_1x.jpg 1x, ./images/gallery_image5_2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/gallery_image5_m_1x.jpg"
+                    srcset="
+                      ./images/gallery_image5_m_1x.jpg 1x,
+                      ./images/gallery_image5_m_2x.jpg 2x
+                    "
+                    alt="castle"
+                    class="swiper-slide__image"
+                  />
+                </picture>
+              </div>
 
-              <picture class="swiper-slide gallery__swiper-slide">
-                <source
-                  media="(max-width: 376px)"
-                  srcset="./images/gallery_image6_m_1x.jpg 1x, ./images/gallery_image6_m_2x.jpg 2x"
-                />
-                <source
-                  media="(max-width: 1439px)"
-                  srcset="./images/gallery_image6_1x.jpg 1x, ./images/gallery_image6_2x.jpg 2x"
-                />
-                <img
-                  src="./images/gallery_image6_m_1x.jpg"
-                  alt="railways"
-                  class="swiper-slide__image"
-                />
-              </picture>
+              <div class="swiper-slide gallery__swiper-slide">
+                <picture>
+                  <source
+                    media="(max-width: 834px)"
+                    srcset="
+                      ./images/gallery_image6_m_1x.jpg 1x,
+                      ./images/gallery_image6_m_2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 835px)"
+                    srcset="./images/gallery_image6_1x.jpg 1x, ./images/gallery_image6_2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="./images/gallery_image6_1x.jpg 1x, ./images/gallery_image6_2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/gallery_image6_m_1x.jpg"
+                    srcset="
+                      ./images/gallery_image6_m_1x.jpg 1x,
+                      ./images/gallery_image6_m_2x.jpg 2x
+                    "
+                    alt="railways"
+                    class="swiper-slide__image"
+                  />
+                </picture>
+              </div>
 
-              <picture class="swiper-slide gallery__swiper-slide">
-                <source
-                  media="(max-width: 376px)"
-                  srcset="./images/gallery_image7_m_1x.jpg 1x, ./images/gallery_image7_m_2x.jpg 2x"
-                />
-                <source
-                  media="(max-width: 1439px)"
-                  srcset="./images/gallery_image7_1x.jpg 1x, ./images/gallery_image7_2x.jpg 2x"
-                />
-                <img
-                  src="./images/gallery_image7_m_1x.jpg"
-                  alt="night sky"
-                  class="swiper-slide__image"
-                />
-              </picture>
+              <div class="swiper-slide gallery__swiper-slide">
+                <picture>
+                  <source
+                    media="(max-width: 834px)"
+                    srcset="
+                      ./images/gallery_image7_m_1x.jpg 1x,
+                      ./images/gallery_image7_m_2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 835px)"
+                    srcset="./images/gallery_image7_1x.jpg 1x, ./images/gallery_image7_2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="./images/gallery_image7_1x.jpg 1x, ./images/gallery_image7_2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/gallery_image7_m_1x.jpg"
+                    srcset="
+                      ./images/gallery_image7_m_1x.jpg 1x,
+                      ./images/gallery_image7_m_2x.jpg 2x
+                    "
+                    alt="night sky"
+                    class="swiper-slide__image"
+                  />
+                </picture>
+              </div>
             </div>
             <div class="swiper__navigation swiper__navigation--margin">
               <button type="button" class="swiper-button swiper-button-prev">
@@ -486,7 +633,7 @@
         <div class="reviews__bg">
           <div class="container reviews__container">
             <h2 class="title reviews__title">Reviews</h2>
-            <div class="swiper">
+            <div class="swiper swiper-reviews">
               <div class="swiper-wrapper">
                 <div class="swiper-slide reviews__swiper-slide">
                   <div class="reviews__wrapper">
