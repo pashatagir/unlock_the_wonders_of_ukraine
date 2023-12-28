@@ -54,9 +54,5 @@
       screen and (min-resolution: 2dppx) {
       @content;
     }
-  } @else if $range == notDesktop {
-    @media screen and (max-width: #{$desktop - 0.02}) {
-      @content;
-    }
   }
 }

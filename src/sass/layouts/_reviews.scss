@@ -9,15 +9,13 @@
   }
 
   &__bg {
-    @include mq(mobile-only) {
-      background: url(/src/images/reviews_bg_1x.jpg) no-repeat center;
+    background: url(/src/images/reviews_bg_1x.jpg) no-repeat center;
+    background-size: cover;
+    @include mq(retina) {
+      background: url(/src/images/reviews_bg_2x.jpg) no-repeat center;
       background-size: cover;
-      @include mq(retina) {
-        background: url(/src/images/reviews_bg_2x.jpg) no-repeat center;
-        background-size: cover;
-      }
-      padding-top: 32px;
     }
+    padding-top: 32px;
     @include mq(tablet) {
       background: url(/src/images/reviews_bg_tab_1x.jpg) no-repeat center;
       background-size: cover;

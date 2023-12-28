@@ -8,7 +8,6 @@ const swiperTour = new Swiper('.tours__swiper', {
   grabCursor: true,
   slidesPerView: 1,
   spaceBetween: 16,
-
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -27,7 +26,7 @@ const swiperGallery = new Swiper('.gallery__swiper', {
   grabCursor: true,
   slidesPerView: 1,
   spaceBetween: 16,
-
+  lazy: true,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -50,7 +49,6 @@ const swiperReviews = new Swiper('.reviews__swiper', {
   grabCursor: true,
   slidesPerView: 1,
   spaceBetween: 16,
-
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',

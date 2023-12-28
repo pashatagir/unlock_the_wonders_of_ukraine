@@ -9,6 +9,12 @@
 
   &__button {
     background-color: transparent;
+    opacity: 1;
+    transition: opacity $duration $function;
+    &:hover,
+    &:focus {
+      opacity: 0.35;
+    }
   }
 
   &__button--hidden,
@@ -37,16 +43,15 @@
   &__container {
     @include flex(flex, null, center);
     flex-direction: column;
-    @include mq(mobile-only) {
-      background: url(/src/images/hero_bg.jpg) no-repeat center;
+    background: url(/src/images/hero_bg.jpg) no-repeat center;
+    background-size: cover;
+    @include mq(retina) {
+      background: url(/src/images/hero_bg_retina.jpg) no-repeat center;
       background-size: cover;
-      @include mq(retina) {
-        background: url(/src/images/hero_bg_retina.jpg) no-repeat center;
-        background-size: cover;
-      }
-      padding-top: 261px;
-      padding-bottom: 32px;
     }
+    padding-top: 261px;
+    padding-bottom: 32px;
+
     @include mq(tablet) {
       background: url(/src/images/hero_bg_tablet_1x.jpg) no-repeat center;
       background-size: cover;
@@ -57,6 +62,7 @@
       padding-top: 318px;
       padding-bottom: 64px;
     }
+
     @include mq(desktop) {
       background: url(/src/images/hero_bg_des_1x.jpg) no-repeat center;
       background-size: cover;
@@ -72,19 +78,15 @@
   &__title {
     @include flex(flex, null, center);
     flex-direction: column;
-    @include mq(mobile-only) {
-      @include font(64, 1.4, 0.64);
-      margin-bottom: 64px;
-    }
+    @include font(64, 1.4, 0.64);
+    margin-bottom: 64px;
     @include mq(tablet) {
       @include font(128, 1.4, 1.28);
       margin-bottom: 54px;
     }
 
     & > span {
-      @include mq(mobile-only) {
-        @include font(24, 1.4, 0.24);
-      }
+      @include font(24, 1.4, 0.24);
       @include mq(tablet) {
         @include font(48, 1.4, 0.48);
       }
@@ -106,13 +108,10 @@
 
   &__link {
     z-index: 1;
-    padding: 12px 52px;
-    border-radius: 4px;
+    padding: 11px 52px;
     margin-bottom: 226px;
-    background-color: $btnColor;
-    @include font(16, 1.4, 0.16);
     @include mq(tablet-only) {
-      padding: 16px 52px;
+      padding: 15px 52px;
       margin-bottom: 135px;
     }
     @include mq(desktop) {
@@ -141,7 +140,7 @@
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center bottom, center top;
-  transition: transform 1000ms $mainTransitionTimingFunction;
+  transition: transform 1000ms $function;
 
   &__wrapper {
     @include flex(flex, space-between, center);
@@ -154,30 +153,5 @@
     font-family: $secondaryFontFamily;
     font-weight: secondFontWeight;
     @include font(18, 1.4, 0.18);
-  }
-}
-
-.is-open {
-  transform: translateY(100vh);
-}
-.no-scroll {
-  overflow: hidden;
-}
-
-.to-top {
-  padding-top: 7px;
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  border: 1px solid $primaryColor;
-  fill: $primaryColor;
-  opacity: 0.35;
-  position: fixed;
-  z-index: 2;
-  bottom: 10px;
-  right: 10px;
-  &:focus,
-  &:hover {
-    opacity: 0.8;
   }
 }

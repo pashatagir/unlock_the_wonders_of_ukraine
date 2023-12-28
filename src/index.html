@@ -9,7 +9,7 @@
     <header class="header" id="header">
       <div class="container">
         <nav class="navigation header__navigation">
-          <a href="#header">
+          <a href="#header" class="link navigation__link">
             <svg width="64" height="46">
               <use href="./images/sprite.svg#icon-logo"></use>
             </svg>
@@ -20,10 +20,10 @@
             </svg>
           </button>
           <ul class="header__navigation__list">
-            <li><a href="#about" class="mobile-menu__link">About us</a></li>
-            <li><a href="#tours" class="mobile-menu__link">Tours</a></li>
-            <li><a href="#gallery" class="mobile-menu__link">Gallery</a></li>
-            <li><a href="#contacts" class="mobile-menu__link">Contacts</a></li>
+            <li><a href="#about" class="link navigation__link">About us</a></li>
+            <li><a href="#tours" class="link navigation__link">Tours</a></li>
+            <li><a href="#gallery" class="link navigation__link">Gallery</a></li>
+            <li><a href="#contacts" class="link navigation__link">Contacts</a></li>
           </ul>
         </nav>
       </div>
@@ -32,7 +32,7 @@
       <div class="container">
         <nav class="navigation mobile-menu__navigation">
           <div class="mobile-menu__wrapper">
-            <a href="#header" class="mobile-menu__link">
+            <a href="#header" class="link mobile-menu__link navigation__link">
               <svg width="64" height="46">
                 <use href="./images/sprite.svg#icon-logo"></use>
               </svg>
@@ -44,10 +44,12 @@
             </button>
           </div>
           <ul class="navigation__list navigation__list--margin">
-            <li><a href="#about" class="mobile-menu__link">About us</a></li>
-            <li><a href="#tours" class="mobile-menu__link">Tours</a></li>
-            <li><a href="#gallery" class="mobile-menu__link">Gallery</a></li>
-            <li><a href="#contacts" class="mobile-menu__link">Contacts</a></li>
+            <li><a href="#about" class="link mobile-menu__link navigation__link">About us</a></li>
+            <li><a href="#tours" class="link mobile-menu__link navigation__link">Tours</a></li>
+            <li><a href="#gallery" class="link mobile-menu__link navigation__link">Gallery</a></li>
+            <li>
+              <a href="#contacts" class="link mobile-menu__link navigation__link">Contacts</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -61,6 +63,7 @@
             <li>
               <a
                 href="https://www.instagram.com/"
+                class="link"
                 target="_blank"
                 rel="noopener noreferrer nofollov"
               >
@@ -72,6 +75,7 @@
             <li>
               <a
                 href="https://www.facebook.com/?locale=uk_UA"
+                class="link"
                 target="_blank"
                 rel="noopener noreferrer nofollov"
               >
@@ -83,6 +87,7 @@
             <li>
               <a
                 href="https://web.telegram.org/"
+                class="link"
                 target="_blank"
                 rel="noopener noreferrer nofollov"
               >
@@ -390,7 +395,7 @@
           <h2 class="title gallery__title">Gallery</h2>
           <div class="swiper gallery__swiper">
             <div class="swiper-wrapper">
-              <div class="swiper-slide gallery__swiper-slide">
+              <div class="swiper-slide gallery__swiper-slide efect__swiper">
                 <picture>
                   <source
                     media="(max-width: 834px)"
@@ -412,7 +417,9 @@
                     srcset="./images/gallery_image_m_1x.jpg 1x, ./images/gallery_image_m_2x.jpg 2x"
                     alt="winter forest"
                     class="swiper-slide__image"
+                    loading="lazy"
                   />
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                 </picture>
               </div>
 
@@ -444,7 +451,9 @@
                     "
                     alt="forest"
                     class="swiper-slide__image"
+                    loading="lazy"
                   />
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                 </picture>
               </div>
 
@@ -476,7 +485,9 @@
                     "
                     alt="pink lake"
                     class="swiper-slide__image"
+                    loading="lazy"
                   />
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                 </picture>
               </div>
 
@@ -508,7 +519,9 @@
                     "
                     alt="forest and lake"
                     class="swiper-slide__image"
+                    loading="lazy"
                   />
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                 </picture>
               </div>
 
@@ -540,7 +553,9 @@
                     "
                     alt="lake"
                     class="swiper-slide__image"
+                    loading="lazy"
                   />
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                 </picture>
               </div>
 
@@ -572,7 +587,9 @@
                     "
                     alt="castle"
                     class="swiper-slide__image"
+                    loading="lazy"
                   />
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                 </picture>
               </div>
 
@@ -604,7 +621,9 @@
                     "
                     alt="railways"
                     class="swiper-slide__image"
+                    loading="lazy"
                   />
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                 </picture>
               </div>
 
@@ -636,7 +655,9 @@
                     "
                     alt="night sky"
                     class="swiper-slide__image"
+                    loading="lazy"
                   />
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                 </picture>
               </div>
             </div>
@@ -986,26 +1007,31 @@
     <footer class="footer">
       <div class="container footer__container">
         <nav class="navigation footer__navigation">
-          <a href="#header" class="footer__logo">
+          <a href="#header" class="footer__logo link navigation__link">
             <svg width="127" height="90" class="footer__logo__icon">
               <use href="./images/sprite.svg#icon-logo"></use>
             </svg>
           </a>
           <ul class="navigation__list">
-            <li><a href="#about">About us</a></li>
-            <li><a href="#tours">Tours</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#contacts" id="contacts">Contacts</a></li>
+            <li><a href="#about" class="link navigation__link">About us</a></li>
+            <li><a href="#tours" class="link navigation__link">Tours</a></li>
+            <li><a href="#gallery" class="link navigation__link">Gallery</a></li>
+            <li><a href="#contacts" class="link navigation__link" id="contacts">Contacts</a></li>
           </ul>
         </nav>
         <div class="wrapper__info">
           <address id="contacts">
             <ul class="address__list">
-              <li><a href="tel:+380971231111">+38097-123-11-11</a></li>
-              <li><a href="mailto:wondersofukraine@gmail.com">WondersOfUkraine@gmail.com</a></li>
+              <li><a href="tel:+380971231111" class="link">+38097-123-11-11</a></li>
+              <li>
+                <a href="mailto:wondersofukraine@gmail.com" class="link"
+                  >WondersOfUkraine@gmail.com</a
+                >
+              </li>
               <li>
                 <a
                   href="https://www.google.com/maps/place/%D0%B2%D1%83%D0%BB.+%D0%97%D0%B0%D0%BF%D0%BE%D1%80%D1%96%D0%B7%D1%8C%D0%BA%D0%B0,+%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D0%BF%D0%B0%D0%B2%D0%BB%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+%D0%91%D0%BE%D1%80%D1%89%D0%B0%D0%B3%D1%96%D0%B2%D0%BA%D0%B0,+%D0%9A%D0%B8%D1%97%D0%B2%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB./@50.42172,30.3284155,17z/data=!3m1!4b1!4m6!3m5!1s0x40d4cb0e447e7d7f:0x2cbf3d064d7c2b9d!8m2!3d50.4217166!4d30.3309904!16s%2Fg%2F11gcdnm6fy?authuser=0&entry=ttu"
+                  class="link"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
                   >Lviv, Zaporyzhka, 198</a
@@ -1017,6 +1043,7 @@
             <li>
               <a
                 href="https://www.instagram.com/"
+                class="link"
                 target="_blank"
                 rel="noopener noreferrer nofollov"
               >
@@ -1028,6 +1055,7 @@
             <li>
               <a
                 href="https://www.facebook.com/?locale=uk_UA"
+                class="link"
                 target="_blank"
                 rel="noopener noreferrer nofollov"
               >
@@ -1039,6 +1067,7 @@
             <li>
               <a
                 href="https://web.telegram.org/"
+                class="link"
                 target="_blank"
                 rel="noopener noreferrer nofollov"
               >

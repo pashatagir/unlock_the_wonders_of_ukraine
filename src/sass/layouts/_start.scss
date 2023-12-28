@@ -4,16 +4,14 @@
   }
 
   &__bg {
-    @include mq(mobile-only) {
-      background: url(/src/images/start_bg_1x.jpg) no-repeat center;
+    background: url(/src/images/start_bg_1x.jpg) no-repeat center -1px;
+    background-size: cover;
+    @include mq(retina) {
+      background: url(/src/images/start_bg_2x.jpg) no-repeat center -1px;
       background-size: cover;
-      @include mq(retina) {
-        background: url(/src/images/start_bg_2x.jpg) no-repeat center;
-        background-size: cover;
-      }
-      padding-top: 54px;
-      padding-bottom: 54px;
     }
+    padding-top: 54px;
+    padding-bottom: 54px;
     @include mq(tablet) {
       background: url(/src/images/start_bg_tablet_1x.jpg) no-repeat left center;
       background-size: contain;
@@ -127,6 +125,5 @@
   &__button {
     width: 100%;
     padding: 14px 0px;
-    border-radius: 4px;
   }
 }

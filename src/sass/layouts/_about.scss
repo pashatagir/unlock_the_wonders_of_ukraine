@@ -1,12 +1,10 @@
 .about {
   &__container {
-    @include mq(mobile-only) {
-      background: url(/src/images/map.png) no-repeat center top;
+    background: url(/src/images/map.png) no-repeat center top;
+    background-size: contain;
+    @include mq(retina) {
+      background: url(/src/images/map_2x.png) no-repeat center top;
       background-size: contain;
-      @include mq(retina) {
-        background: url(/src/images/map_2x.png) no-repeat center top;
-        background-size: contain;
-      }
     }
     @include mq(tablet) {
       background: url(/src/images/map_tablet_1x.png) no-repeat center bottom;
