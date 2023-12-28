@@ -1,5 +1,16 @@
 .tours__container {
   padding-inline: 0;
+  @include mq(desktop) {
+    background: url('/src/images/element_tour_1x.png') no-repeat;
+    background-position: 940px 810px;
+    background-size: 489px auto;
+
+    @include mq(retina) {
+      background: url('/src/images/element_tour_2x.png') no-repeat;
+      background-position: 940px 810px;
+      background-size: 489px auto;
+    }
+  }
 }
 
 .tour {
@@ -22,7 +33,7 @@
         'paragraph title_list';
     }
     @include mq(desktop) {
-      width: 496px;
+      width: 510px;
       display: flex;
       flex-direction: column;
     }
@@ -34,8 +45,9 @@
     font-weight: $fontWeight;
     margin: 16px 0px;
     grid-area: subtitle;
-    @include mq(tablet-only) {
+    @include mq(tablet) {
       margin: 40px 0px 24px;
+      @include font(32, 1.4, 0.32);
     }
     @include mq(desktop) {
       margin: 106px 0px 32px;
