@@ -3,30 +3,48 @@
     padding-right: 0;
   }
 }
+
 .swiper__navigation {
   margin-top: 32px;
   @include flex(flex, space-between, center);
+}
 
-  &--padding {
-    padding: 0 16px;
-    @include mq(tablet) {
-      @include flex(flex, space-evenly, center);
-      margin-top: 76px;
-    }
+.gallery__swiper .swiper__navigation {
+  @include mq(tablet) {
+    margin-top: 64px;
   }
-  &--margin {
-    @include mq(tablet) {
-      margin-top: 64px;
-      @include mq(desktop) {
-        padding-right: 32px;
-      }
-    }
+  @include mq(desktop) {
+    padding-right: 32px;
   }
-  &--large-margin {
-    @include mq(tablet) {
-      margin-top: 97px;
-      padding-right: 32px;
-    }
+}
+
+.tours__swiper .swiper__navigation {
+  @include mq(mobile-only) {
+    padding-inline: 16px;
+  }
+  @include mq(tablet) {
+    margin-top: 60px;
+    @include flex(flex, space-evenly, center);
+  }
+  @include mq(desktop) {
+    position: absolute;
+    z-index: 1;
+    top: 582px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0;
+    gap: 1088px;
+  }
+}
+
+.reviews__swiper .swiper__navigation {
+  @include mq(tablet) {
+    margin-top: 97px;
+    padding-right: 32px;
+  }
+  @include mq(desktop) {
+    margin-top: 64px;
+    @include flex(flex, space-evenly, center);
   }
 }
 
@@ -35,7 +53,8 @@
   margin: 0 auto;
 }
 
-.swiper-button > svg {
+.swiper-button-prev > svg,
+.swiper-button-next > svg {
   width: 114px;
   @include mq(tablet) {
     width: 144px;

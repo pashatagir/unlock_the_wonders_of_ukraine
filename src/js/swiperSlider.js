@@ -21,7 +21,7 @@ const swiperTour = new Swiper('.tours__swiper', {
   },
 });
 
-const swiperGallery = new Swiper('.swiper-gallery', {
+const swiperGallery = new Swiper('.gallery__swiper', {
   modules: [Navigation],
   speed: 500,
   grabCursor: true,
@@ -44,7 +44,7 @@ const swiperGallery = new Swiper('.swiper-gallery', {
   },
 });
 
-const swiperReviews = new Swiper('.swiper-reviews', {
+const swiperReviews = new Swiper('.reviews__swiper', {
   modules: [Navigation],
   speed: 500,
   grabCursor: true,

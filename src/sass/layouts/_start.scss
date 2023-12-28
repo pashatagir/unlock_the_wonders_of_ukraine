@@ -1,4 +1,8 @@
 .start {
+  & > .container {
+    padding-inline: 0;
+  }
+
   &__bg {
     @include mq(mobile-only) {
       background: url(/src/images/start_bg_1x.jpg) no-repeat center;
@@ -21,11 +25,11 @@
       padding-bottom: 135px;
     }
     @include mq(desktop) {
-      background: url(/src/images/start_bg_des_1x.jpg) no-repeat center;
-      background-size: cover;
+      background: url(/src/images/start_bg_des_1x.jpg) no-repeat -4px 9px;
+      background-size: contain;
       @include mq(retina) {
-        background: url(/src/images/start_bg_des_2x.jpg) no-repeat center;
-        background-size: cover;
+        background: url(/src/images/start_bg_des_2x.jpg) no-repeat -4px 9px;
+        background-size: contain;
       }
     }
   }
@@ -38,6 +42,9 @@
     @include mq(tablet) {
       background-color: transparent;
     }
+    @include mq(desktop) {
+      padding-left: 376px;
+    }
   }
 
   &__wrapper {
@@ -49,6 +56,11 @@
       background-color: $backgroundColor;
       border: 1px solid $primaryColor;
       border-radius: 4px;
+    }
+    @include mq(desktop) {
+      width: 1032px;
+      height: 570px;
+      padding: 96px 180px;
     }
   }
 

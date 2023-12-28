@@ -1,5 +1,8 @@
 .footer {
   padding: 96px 0px 16px;
+  @include mq(tablet) {
+    padding-top: 132px;
+  }
 
   &__social-list {
     margin: 32px 0px 64px;
@@ -15,6 +18,9 @@
     @include mq(tablet) {
       @include flex(flex, space-between, flex-start);
     }
+    @include mq(desktop) {
+      padding-left: 86px;
+    }
   }
 
   &__navigation {
@@ -27,11 +33,18 @@
     @include mq(tablet) {
       margin-right: 148px;
     }
+    @include mq(desktop) {
+      margin-right: 340px;
+    }
   }
   &__logo__icon {
     @include mq(tablet) {
       width: 169px;
       height: 125px;
+    }
+    @include mq(desktop) {
+      width: 259px;
+      height: 167px;
     }
   }
 }

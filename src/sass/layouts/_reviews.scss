@@ -4,6 +4,10 @@
     padding-bottom: 57px;
   }
 
+  & > .container {
+    padding-inline: 0;
+  }
+
   &__bg {
     @include mq(mobile-only) {
       background: url(/src/images/reviews_bg_1x.jpg) no-repeat center;

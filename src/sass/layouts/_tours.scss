@@ -1,100 +1,133 @@
-.tour__container {
-  display: grid;
-  grid-template-areas: 'subtitle' 'paragraph' 'title_list' 'button' 'button';
-  // grid-template-rows: minmax() minmax() 168px 54px;
-  padding-inline: 16px;
-  @include mq(tablet) {
-    padding-inline: 32px;
+.tour {
+  @include flex(flex, space-between, null);
+  flex-direction: column;
+
+  &:not(:first-child) {
+    @include mq(mobile-only) {
+      min-height: 589px;
+    }
   }
 
-  @include mq(tablet-only) {
-    display: grid;
-    column-gap: 32px;
-    grid-template-columns: 496px 1fr;
-    grid-template-areas:
-      'subtitle subtitle'
-      'paragraph title_list'
-      'button button';
+  &__info-wrapper {
+    @include mq(tablet) {
+      display: grid;
+      column-gap: 32px;
+      grid-template-columns: 496px 1fr;
+      grid-template-areas:
+        'subtitle subtitle'
+        'paragraph title_list';
+    }
+    @include mq(desktop) {
+      width: 496px;
+      display: flex;
+      flex-direction: column;
+    }
   }
-}
 
-.tour__title {
-  text-align: left;
-  @include font(24, 1.4, 0.24);
-  font-weight: $fontWeight;
-  margin: 16px 0px;
-  grid-area: subtitle;
-  @include mq(tablet-only) {
-    margin: 40px 0px 24px;
+  &__title {
+    text-align: left;
+    @include font(24, 1.4, 0.24);
+    font-weight: $fontWeight;
+    margin: 16px 0px;
+    grid-area: subtitle;
+    @include mq(tablet-only) {
+      margin: 40px 0px 24px;
+    }
+    @include mq(desktop) {
+      margin: 106px 0px 32px;
+    }
   }
-  @include mq(desktop) {
-    margin: 106px 0px 32px;
+
+  &__description {
+    grid-area: paragraph;
+    @include mq(desktop) {
+      min-height: 157px;
+      margin-bottom: 15px;
+    }
   }
-}
 
-.tour__description {
-  grid-area: paragraph;
-}
-
-.tour__wrapper {
-  grid-area: title_list;
-}
-
-.tour__link {
-  @include font(16, 1.5, 0.206);
-  background-color: $btnColor;
-  padding: 12px 64px;
-  border-radius: 4px;
-  grid-area: button;
-
-  @include mq(mobile-only) {
-    padding: 14px calc(50% - 23px) 14px calc(50% - 16px);
+  &__wrapper {
+    grid-area: title_list;
   }
-}
 
-.tour__button {
-  @include mq(mobile-only) {
-    width: 100%;
+  &__link {
+    @include mq(mobile-only) {
+      padding: 12px 120px;
+    }
+    @include mq(tablet) {
+      padding: 12px 64.5px;
+    }
+    @include mq(desktop) {
+      padding: 12px 52px;
+    }
+  }
+
+  &__button {
+    @include mq(mobile-only) {
+      width: 100%;
+      text-align: center;
+    }
     background-color: $btnColor;
-    padding: 14px 0px;
+    padding: 16px 0;
     border-radius: 4px;
+
+    @include font(16, 1.4, 0.16);
+    @include mq(tablet) {
+      width: 169px;
+    }
+    @include mq(desktop) {
+      width: 144px;
+      margin-right: 38px;
+    }
   }
-}
 
-.tour__paragraph,
-.tour__description__list {
-  margin-bottom: 16px;
-  @include mq(tablet-only) {
-    margin-bottom: 55px;
+  &__description__list {
+    list-style: disc;
+    padding-left: 16px;
   }
-}
 
-.tour__description__list {
-  list-style: disc;
-  padding-left: 16px;
-}
+  &__description__item {
+    font-family: $secondaryFontFamily;
+    @include font(16, 1.4, 0.16);
+  }
 
-.tour__description__item {
-  font-family: $secondaryFontFamily;
-  @include font(16, 1.4, 0.16);
-}
+  &__title-list {
+    margin-bottom: 17px;
+    @include font(18, 1.4, 0.18);
+    font-weight: $fontWeight;
+  }
 
-.title-list {
-  margin-bottom: 17px;
-  @include font(18, 1.4, 0.18);
-  font-weight: $fontWeight;
-}
+  &__list {
+    margin-bottom: 33px;
+  }
 
-.ness-list {
-  margin-bottom: 33px;
-}
-.ness-item {
-  @include flex(flex, start, center);
-  gap: 16px;
-  font-family: $secondaryFontFamily;
-  @include font(16, 1.4, 0.16);
+  &__item {
+    @include flex(flex, start, center);
+    gap: 16px;
+    font-family: $secondaryFontFamily;
+    @include font(16, 1.4, 0.16);
 
-  &:not(:last-of-type) {
-    margin-bottom: 9px;
+    &:not(:last-of-type) {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__price {
+    margin-right: 72px;
+  }
+
+  &__price,
+  &__cost {
+    display: none;
+    @include mq(desktop) {
+      display: block;
+      font-family: $mainFontFamily;
+      @include font(32, 1.4, 0.32);
+    }
+  }
+  &__wrapper--flex {
+    @include mq(desktop) {
+      display: flex;
+    }
   }
 }
