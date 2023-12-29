@@ -24,9 +24,6 @@
   }
 
   &__info-wrapper {
-    @include mq(notDesktop) {
-      background-color: $backgroundColor;
-    }
     @include mq(tablet) {
       display: grid;
       column-gap: 32px;

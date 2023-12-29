@@ -4,7 +4,7 @@ import 'swiper/scss';
 import 'swiper/scss/effect-flip';
 import 'swiper/scss/effect-coverflow';
 
-// const iOs = window.navigator.userAgent.includes('Mac OS');
+const iOs = window.navigator.userAgent.includes('Mac OS');
 
 const swiperTour = new Swiper('.tours__swiper', {
   modules: [Navigation, EffectFlip],
@@ -13,7 +13,7 @@ const swiperTour = new Swiper('.tours__swiper', {
   slidesPerView: 1,
   spaceBetween: 16,
   lazy: true,
-  effect: window.innerWidth < 1440 ? 'flip' : 'null',
+  effect: window.innerWidth < 1440 && !iOs ? 'flip' : 'null',
   flipEffect: {
     slideShadows: false,
   },
@@ -37,7 +37,7 @@ const swiperGallery = new Swiper('.gallery__swiper', {
   slidesPerView: 1,
   spaceBetween: 16,
   lazy: true,
-  effect: window.innerWidth < 835 ? 'flip' : 'coverflow',
+  effect: window.innerWidth < 835 && !iOs ? 'flip' : 'coverflow',
   coverflowEffect: {
     rotate: 20,
     stretch: 0,
