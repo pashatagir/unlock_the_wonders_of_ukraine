@@ -9,10 +9,16 @@
   @include flex(flex, space-between, center);
 }
 
-// -webkit-transform: translate3d(0, 0, 0);
-
 .tours__swiper .swiper-slide {
   @include mq(notDesktop) {
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+  }
+}
+
+.gallery__swiper .swiper-slide,
+.reviews__swiper .swiper-slide {
+  @include mq(mobile-only) {
     -webkit-transform: translate3d(0, 0, 0);
     -webkit-backface-visibility: hidden;
   }

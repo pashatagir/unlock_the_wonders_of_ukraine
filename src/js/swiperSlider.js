@@ -4,8 +4,6 @@ import 'swiper/scss';
 import 'swiper/scss/effect-flip';
 import 'swiper/scss/effect-coverflow';
 
-// const iOs = window.navigator.userAgent.includes('Mac OS');
-
 const swiperTour = new Swiper('.tours__swiper', {
   modules: [Navigation, EffectFlip],
   speed: 500,
@@ -17,7 +15,6 @@ const swiperTour = new Swiper('.tours__swiper', {
   flipEffect: {
     slideShadows: false,
   },
-
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -65,12 +62,15 @@ const swiperGallery = new Swiper('.gallery__swiper', {
 });
 
 const swiperReviews = new Swiper('.reviews__swiper', {
-  modules: [Navigation],
+  modules: [Navigation, EffectFlip],
   speed: 500,
   grabCursor: true,
   slidesPerView: 1,
   spaceBetween: 16,
-  lazy: true,
+  effect: window.innerWidth < 835 ? 'flip' : 'null',
+  flipEffect: {
+    slideShadows: false,
+  },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',

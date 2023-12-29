@@ -116,6 +116,7 @@ button {
 .swiper-button-next {
   opacity: 1;
   transition: opacity $duration $function;
+  &:focus,
   &:hover {
     opacity: 0.35;
   }
