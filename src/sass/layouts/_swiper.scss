@@ -9,12 +9,12 @@
   @include flex(flex, space-between, center);
 }
 
-.gallery__swiper .swiper__navigation {
-  @include mq(tablet) {
-    margin-top: 64px;
-  }
-  @include mq(desktop) {
-    padding-right: 32px;
+// -webkit-transform: translate3d(0, 0, 0);
+
+.tours__swiper .swiper-slide {
+  @include mq(notDesktop) {
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
   }
 }
 
@@ -34,6 +34,15 @@
     transform: translateX(-50%);
     margin-top: 0;
     gap: 1088px;
+  }
+}
+
+.gallery__swiper .swiper__navigation {
+  @include mq(tablet) {
+    margin-top: 64px;
+  }
+  @include mq(desktop) {
+    padding-right: 32px;
   }
 }
 
