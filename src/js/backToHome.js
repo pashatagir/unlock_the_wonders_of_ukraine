@@ -13,7 +13,7 @@ anchorEl.forEach(anchor => {
 
 window.addEventListener('scroll', () => {
   let y = window.scrollY;
-  if (y > 850) {
+  if (y > 1000) {
     backHomeEl.style.display = 'block';
   } else {
     backHomeEl.style.display = 'none';

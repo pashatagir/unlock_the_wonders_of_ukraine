@@ -97,6 +97,14 @@ button {
   z-index: 2;
   bottom: 10px;
   right: 10px;
+  @include mq(tablet) {
+    bottom: 15px;
+    right: 15px;
+  }
+  @include mq(desktop) {
+    bottom: 20px;
+    right: 20px;
+  }
   &:focus,
   &:hover {
     opacity: 0.8;
