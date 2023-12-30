@@ -1003,9 +1003,14 @@
                     name="phone"
                     placeholder="+380__-___-__-__"
                     required
-                    pattern="^\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})$"
+                    pattern="^\+380\d{2}-\d{3}-\d{2}-\d{2}$"
                   />
-                  <textarea rows="3" placeholder="Your message" class="form__textarea"></textarea>
+                  <textarea
+                    rows="3"
+                    placeholder="Your message"
+                    class="form__textarea"
+                    name="message"
+                  ></textarea>
                   <button type="submit" class="form__button">Send</button>
                 </form>
               </div>
