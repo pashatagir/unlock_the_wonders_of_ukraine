@@ -5,9 +5,17 @@ anchorEl.forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
 
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth',
-    });
+    // document.querySelector(this.getAttribute('href')).scrollIntoView({
+    //   behavior: 'smooth',
+    // });
+    const targetId = this.getAttribute('href').substring(1); // remove the '#' symbol
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+      });
+    }
   });
 });
 
