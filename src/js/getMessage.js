@@ -1,9 +1,3 @@
-const config =
-  process.env.NODE_ENV === 'production'
-    ? require('../../config.prod')
-    : require('../../config.dev');
-const tokenKey = config.tokenKey;
-
 const refs = {
   form: document.querySelector('.form'),
   inputName: document.querySelector('[name=username]'),
@@ -29,8 +23,8 @@ function onFormSubmit(event) {
 }
 
 let tg = {
-  token: tokenKey, // Your bot's token that got from @BotFather like this 4839574812:AAFD39kkdpWt3ywyRZergyOLMaJhac60qc
-  chat_id: '227304777', // The user's(that you want to send a message) telegram chat id like this 227304770
+  token: 'BOT_TOKEN', // Your bot's token that got from @BotFather like this 4839574812:AAFD39kkdpWt3ywyRZergyOLMaJhac60qc
+  chat_id: 'CHAT_ID', // The user's(that you want to send a message) telegram chat id like this 227304770
 };
 
 function sendMessage(text) {
