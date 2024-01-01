@@ -16,6 +16,7 @@ function onFormSubmit(event) {
   };
   if (refs.inputName.value && refs.inputPhone.value !== '') {
     sendMessage(dataForm);
+    console.log(dataForm);
     refs.form.reset();
   } else {
     alert('Name and phone number are required!');
