@@ -1,3 +1,1 @@
-module.exports = {
-  tokenKey: process.env.TOKEN_KEY,
-};
+export const tokenKey = process.env.TOKEN_KEY;
