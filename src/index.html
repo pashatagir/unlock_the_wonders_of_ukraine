@@ -994,6 +994,7 @@
                     type="text"
                     name="username"
                     placeholder="Enter your name"
+                    minlength="2"
                     required
                   />
                   <label class="form__label">Phone</label>
@@ -1002,9 +1003,11 @@
                     type="tel"
                     name="phone"
                     placeholder="+380__-___-__-__"
+                    pattern="^\+380\d{2}[\s\-]\d{3}[\s\-]\d{2}[\s\-]\d{2}$"
                     required
-                    pattern="^\+380\d{2}[-|\s]\d{3}[-|\s]\d{2}[-|\s]\d{2}$"
                   />
+                  <!-- pattern="^\+380\d{2}[\s\.-]\d{3}[\s\.-]\d{2}[\s\.-]\d{2}$" -->
+                  <!-- pattern="^\+380\d{2}[-|\s]\d{3}[-|\s]\d{2}[-|\s]\d{2}$" -->
                   <textarea
                     rows="3"
                     placeholder="Your message"

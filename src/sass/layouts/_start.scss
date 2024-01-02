@@ -102,6 +102,10 @@
     width: 100%;
     background-color: $backgroundColor;
     border: 1px solid $primaryColor;
+    &:focus {
+      outline: none;
+      border: 1px solid $btnColor;
+    }
   }
   &__label {
     margin-bottom: 8px;
@@ -126,4 +130,8 @@
     width: 100%;
     padding: 14px 0px;
   }
+}
+
+.form__input:not(:placeholder-shown):required:invalid {
+  border-color: red;
 }
