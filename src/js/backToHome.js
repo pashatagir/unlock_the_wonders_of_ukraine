@@ -6,8 +6,8 @@ const anchorEl = document.querySelectorAll('a[href^="#"]');
 anchorEl.forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
-    smoothscroll.polyfill();
-    document.querySelector(this.getAttribute('href')).scrollIntoView();
+
+    document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
   });
 });
 
@@ -19,3 +19,5 @@ window.addEventListener('scroll', () => {
     backHomeEl.style.display = 'none';
   }
 });
+
+smoothscroll.polyfill();
