@@ -13,10 +13,10 @@ anchorEl.forEach(anchor => {
 
 window.addEventListener('scroll', () => {
   let y = window.scrollY;
-  if (y > 1000) {
-    backHomeEl.style.display = 'block';
-  } else {
+  if (y < 1000 || document.body.classList.contains('no-scroll')) {
     backHomeEl.style.display = 'none';
+  } else {
+    backHomeEl.style.display = 'block';
   }
 });
 
