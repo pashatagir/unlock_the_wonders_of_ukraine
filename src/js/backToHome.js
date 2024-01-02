@@ -1,5 +1,3 @@
-import smoothscroll from 'smoothscroll-polyfill';
-
 const backHomeEl = document.querySelector('.to-top');
 const anchorEl = document.querySelectorAll('a[href^="#"]');
 
@@ -19,5 +17,3 @@ window.addEventListener('scroll', () => {
     backHomeEl.style.display = 'block';
   }
 });
-
-smoothscroll.polyfill();
