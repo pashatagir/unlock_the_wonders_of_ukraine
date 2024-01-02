@@ -5,6 +5,7 @@ body {
   background-color: $backgroundColor;
   font-family: $mainFontFamily;
   font-weight: $fontWeight;
+  scroll-behavior: smooth;
 }
 
 section:not(:first-of-type) {
