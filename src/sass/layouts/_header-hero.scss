@@ -138,12 +138,12 @@
   padding-top: 16px;
   background: url(/src/images/mobile_menu_bg_1x.jpg) $backgroundColor;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: contain;
   background-position: center bottom, center top;
   @include mq(retina) {
     background: url(/src/images/mobile_menu_bg_2x.jpg) $backgroundColor;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: contain;
     background-position: center bottom, center top;
   }
   transition: transform 1000ms $function;
